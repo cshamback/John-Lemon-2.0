@@ -15,7 +15,7 @@ E:/Unity/Games/John-Lemon-Repository-main/John Lemon v3
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53238
+52233
 Successfully changed project path to: E:/Unity/Games/John-Lemon-Repository-main/John Lemon v3
 E:/Unity/Games/John-Lemon-Repository-main/John Lemon v3
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,16 +49,16 @@ E:/Unity/Games/John-Lemon-Repository-main/John Lemon v3
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [26084]  Target information:
+Player connection [8184]  Target information:
 
-Player connection [26084]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 2236514460 [EditorId] 2236514460 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-DCMIM3DN) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [8184]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 3772244292 [EditorId] 3772244292 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-DCMIM3DN) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [26084]  * "[IP] 10.189.99.79 [Port] 0 [Flags] 2 [Guid] 2236514460 [EditorId] 2236514460 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-DCMIM3DN) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [8184]  * "[IP] 10.189.97.228 [Port] 0 [Flags] 2 [Guid] 3772244292 [EditorId] 3772244292 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-DCMIM3DN) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [26084] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [26084] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [8184] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8184] Host joined alternative multi-casting on [225.0.0.222:34997]...
 [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-Refreshing native plugins compatible for Editor in 1819.91 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 74.35 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.46f1 (8e9b8558c41a)
 [Subsystems] Discovering subsystems at path E:/Unity/Unity 2022.3.46f1/Editor/Data/Resources/UnitySubsystems
@@ -74,44 +74,44 @@ Initialize mono
 Mono path[0] = 'E:/Unity/Unity 2022.3.46f1/Editor/Data/Managed'
 Mono path[1] = 'E:/Unity/Unity 2022.3.46f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/Unity/Unity 2022.3.46f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56752
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56604
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/Unity/Unity 2022.3.46f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.020298 seconds.
-- Loaded All Assemblies, in  1.554 seconds
+Registered in 0.004345 seconds.
+- Loaded All Assemblies, in  0.682 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.364 seconds
-Domain Reload Profiling: 1917ms
-	BeginReloadAssembly (1129ms)
+- Finished resetting the current domain, in  0.321 seconds
+Domain Reload Profiling: 1003ms
+	BeginReloadAssembly (114ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (88ms)
-	LoadAllAssembliesAndSetupDomain (291ms)
-		LoadAssemblies (1127ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (62ms)
+	LoadAllAssembliesAndSetupDomain (456ms)
+		LoadAssemblies (113ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (289ms)
-			TypeCache.Refresh (288ms)
-				TypeCache.ScanAssembly (274ms)
+		AnalyzeDomain (453ms)
+			TypeCache.Refresh (452ms)
+				TypeCache.ScanAssembly (439ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (364ms)
+	FinalizeReload (322ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (316ms)
+		SetupLoadedEditorAssemblies (269ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
+			InitializePlatformSupportModulesInManaged (11ms)
 			SetLoadedEditorAssemblies (8ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (235ms)
-			ProcessInitializeOnLoadMethodAttributes (62ms)
+			ProcessInitializeOnLoadAttributes (183ms)
+			ProcessInitializeOnLoadMethodAttributes (65ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -120,902 +120,75 @@ Domain Reload Profiling: 1917ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-BadImageFormatException: Format of the executable (.exe) or library (.dll) is invalid.
-  at Mono.Cecil.PE.ImageReader.ReadImage () [0x00026] in <a6860a9f6366437387ebdc1f225b7fd4>:0 
-  at Mono.Cecil.PE.ImageReader.ReadImage (Mono.Disposable`1[T] stream, System.String file_name) [0x00007] in <a6860a9f6366437387ebdc1f225b7fd4>:0 
-  at Mono.Cecil.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.Cecil.ReaderParameters parameters) [0x00006] in <a6860a9f6366437387ebdc1f225b7fd4>:0 
-  at Mono.Cecil.ModuleDefinition.ReadModule (System.String fileName, Mono.Cecil.ReaderParameters parameters) [0x0006c] in <a6860a9f6366437387ebdc1f225b7fd4>:0 
-  at Mono.Cecil.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.Cecil.ReaderParameters parameters) [0x00000] in <a6860a9f6366437387ebdc1f225b7fd4>:0 
-  at UnityEditor.AssemblyValidation.LoadAssemblyDefinitions (System.String[] assemblyPaths, System.String[] searchPaths) [0x00048] in <e0a2c8363ef54a6393fed120beebdb7a>:0 
-  at UnityEditor.AssemblyValidation.ValidateAssemblies (System.String[] assemblyPaths, System.Boolean enableLogging) [0x00007] in <e0a2c8363ef54a6393fed120beebdb7a>:0 
-
-Failed loading assembly Library/ScriptAssemblies/Unity.Timeline.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.Timeline.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/UnityEngine.UI.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/UnityEngine.UI.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/UnityEngine.TestRunner.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/UnityEngine.TestRunner.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.Timeline.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.Timeline.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.Settings.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.Settings.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.TextMeshPro.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.TextMeshPro.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.Core.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.Core.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/UnityEditor.UI.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/UnityEditor.UI.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.Rider.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.Rider.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.State.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.State.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VSCode.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VSCode.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/UnityEditor.TestRunner.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/UnityEditor.TestRunner.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll" reason: File does not contain a valid CIL image
-- Loaded All Assemblies, in  1.029 seconds
+- Loaded All Assemblies, in  4.238 seconds
 Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.389 seconds
-Domain Reload Profiling: 1408ms
-	BeginReloadAssembly (156ms)
+- Finished resetting the current domain, in  3.911 seconds
+Domain Reload Profiling: 8151ms
+	BeginReloadAssembly (377ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (10ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (19ms)
-	RebuildCommonClasses (52ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (52ms)
-	LoadAllAssembliesAndSetupDomain (746ms)
-		LoadAssemblies (740ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (100ms)
+	RebuildNativeTypeToScriptingClass (24ms)
+	initialDomainReloadingComplete (108ms)
+	LoadAllAssembliesAndSetupDomain (3629ms)
+		LoadAssemblies (2841ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (99ms)
-			TypeCache.Refresh (96ms)
-				TypeCache.ScanAssembly (84ms)
-			ScanForSourceGeneratedMonoScriptInfo (2ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (390ms)
+		AnalyzeDomain (1026ms)
+			TypeCache.Refresh (826ms)
+				TypeCache.ScanAssembly (658ms)
+			ScanForSourceGeneratedMonoScriptInfo (177ms)
+			ResolveRequiredComponents (18ms)
+	FinalizeReload (3912ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (261ms)
+		SetupLoadedEditorAssemblies (3466ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (5ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (32ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (64ms)
-			ProcessInitializeOnLoadAttributes (161ms)
-			ProcessInitializeOnLoadMethodAttributes (24ms)
-			AfterProcessingInitializeOnLoad (2ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.39 seconds
-Refreshing native plugins compatible for Editor in 4.70 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3131 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 3 unused Assets / (49.4 KB). Loaded Objects now: 3603.
-Memory consumption went from 113.2 MB to 113.1 MB.
-Total: 4.021100 ms (FindLiveObjects: 0.320700 ms CreateObjectMapping: 0.239000 ms MarkObjects: 3.332400 ms  DeleteObjects: 0.126800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 584931.094049 seconds.
-  path: Assets/Abandoned_Asylum/Textures/Tiled/Tiles/Tiles_1_MetallicSmoothness.png
-  artifactKey: Guid(cf0f9c0b8ac219f4288080d88f0732b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/Tiled/Tiles/Tiles_1_MetallicSmoothness.png using Guid(cf0f9c0b8ac219f4288080d88f0732b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: 'fe7bcd334c1509427f002e8a4909003e') in 0.071084 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 19.725409 seconds.
-  path: Assets/Abandoned_Asylum/Textures/Tiled/Tiles/Tiles_1_MetallicSmoothness 1.png
-  artifactKey: Guid(dfc3578bcc3401240aa611f72f0e5176) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/Tiled/Tiles/Tiles_1_MetallicSmoothness 1.png using Guid(dfc3578bcc3401240aa611f72f0e5176) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '081467abd53f62e93d7a005adf7b95fd') in 0.188182 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 5.619361 seconds.
-  path: Assets/Abandoned_Asylum/Textures/Tiled/Tiles/Tiles_1_MetallicSmoothness.png
-  artifactKey: Guid(dfc3578bcc3401240aa611f72f0e5176) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/Tiled/Tiles/Tiles_1_MetallicSmoothness.png using Guid(dfc3578bcc3401240aa611f72f0e5176) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: 'c92946a69f53a874b72f10ce34268fc4') in 0.038813 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 5.604246 seconds.
-  path: Assets/Abandoned_Asylum/Textures/Tiled/Tiles/Tiles_10_Albedo.png
-  artifactKey: Guid(df3807424ceba204c8b7a03170062118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/Tiled/Tiles/Tiles_10_Albedo.png using Guid(df3807424ceba204c8b7a03170062118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '7411f66dc8d2b0ff526bf51ea14fa49d') in 0.001566 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 15.042535 seconds.
-  path: Assets/Abandoned_Asylum/Textures/Tiled/Tiles/Tiles_9_Albedo.png
-  artifactKey: Guid(ff85211e02bdbc340a53c057820d4296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/Tiled/Tiles/Tiles_9_Albedo.png using Guid(ff85211e02bdbc340a53c057820d4296) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: 'd46a6eb7f0708fc1e78924f3d023b878') in 0.000997 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 34.307565 seconds.
-  path: Assets/Abandoned_Asylum/Textures/SmallMetalicCase_MetallicSmoothness.png
-  artifactKey: Guid(ff5f438db55001a459e5ed9490cb874c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/SmallMetalicCase_MetallicSmoothness.png using Guid(ff5f438db55001a459e5ed9490cb874c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '8152cb0f0d676ffa1c528128f6eb27a3') in 0.001282 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 4.999654 seconds.
-  path: Assets/Abandoned_Asylum/Textures/SmallMetalicCase_Normal.png
-  artifactKey: Guid(ff5c96ceeae750c47aa4b8eb4a0ade51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/SmallMetalicCase_Normal.png using Guid(ff5c96ceeae750c47aa4b8eb4a0ade51) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '15db4bc31e55de8a336a37a8ef10eb16') in 0.001766 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 41.029037 seconds.
-  path: Assets/Abandoned_Asylum/Textures/Pillow_Albedo.png
-  artifactKey: Guid(fff36ff32c588cb46ac456aeedf2590a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/Pillow_Albedo.png using Guid(fff36ff32c588cb46ac456aeedf2590a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: 'ea1d50677e25f64952890366766b4b9e') in 0.004739 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 21.204718 seconds.
-  path: Assets/Abandoned_Asylum/Textures/Door_V1_Frame_Door_MetallicSmoothness.png
-  artifactKey: Guid(efad3d03ba799b941819fc38572f2996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/Door_V1_Frame_Door_MetallicSmoothness.png using Guid(efad3d03ba799b941819fc38572f2996) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '0c9f0af97458df1e89cfd29058cf7f33') in 0.001109 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 6.531289 seconds.
-  path: Assets/Abandoned_Asylum/Textures/GateHouse_GH_glass_MetallicSmoothness.png
-  artifactKey: Guid(c27bce09f8129e2498c86e827da58aea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/GateHouse_GH_glass_MetallicSmoothness.png using Guid(c27bce09f8129e2498c86e827da58aea) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '3d0e1a56cd0eaf547aa5ce1fef5f83c0') in 0.001073 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 1.194565 seconds.
-  path: Assets/Abandoned_Asylum/Textures/Fridge_DoorH_Normal.png
-  artifactKey: Guid(ef0cf1d84561fa64e85df91347c111ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/Fridge_DoorH_Normal.png using Guid(ef0cf1d84561fa64e85df91347c111ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '29e0b4563760b87ba01e504bff72ee78') in 0.000976 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 28.241490 seconds.
-  path: Assets/Abandoned_Asylum/Materials/Case_Door.mat
-  artifactKey: Guid(1ad7434fa556867409b2e2afa85105ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/Case_Door.mat using Guid(1ad7434fa556867409b2e2afa85105ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '59be0cf1261beeba083d45e5d24cef11') in 1.936167 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Abandoned_Asylum/Prefabs/Door_V3.prefab
-  artifactKey: Guid(03b6bafda12944d418941c1a0e442d13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Prefabs/Door_V3.prefab using Guid(03b6bafda12944d418941c1a0e442d13) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '4d38adb16ba19f0f8c033c33a3263064') in 0.475807 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 18
-========================================================================
-Received Import Request.
-  Time since last request: 0.000106 seconds.
-  path: Assets/Abandoned_Asylum/Prefabs/Door_V1.prefab
-  artifactKey: Guid(b95c20770a08b1549a9ba34c35f574e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Prefabs/Door_V1.prefab using Guid(b95c20770a08b1549a9ba34c35f574e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '18ebd190c2c8a6591fae071fb9095ddb') in 0.475646 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 19
-========================================================================
-Received Import Request.
-  Time since last request: 0.000058 seconds.
-  path: Assets/Abandoned_Asylum/Materials/Door_V3.mat
-  artifactKey: Guid(b2ca5e5d5e465af49b9df125d3eed284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/Door_V3.mat using Guid(b2ca5e5d5e465af49b9df125d3eed284) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '888ac1d69130944c5c8e15b44f8af17b') in 0.081726 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Abandoned_Asylum/Materials/Door.mat
-  artifactKey: Guid(a5f6fa497cf53d7469bd1066732507c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/Door.mat using Guid(a5f6fa497cf53d7469bd1066732507c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '674d7cf23c51a46b7b4ac910f8a8d15c') in 0.059753 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/Abandoned_Asylum/Materials/Door_Frame_V2.mat
-  artifactKey: Guid(aa6fdd903889bca43bd46b37a01d19f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/Door_Frame_V2.mat using Guid(aa6fdd903889bca43bd46b37a01d19f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '7d6ee5ecfee879213c68b87396fb9199') in 0.047515 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Abandoned_Asylum/Textures/Door_V1_Frame_Door_MetallicSmoothness.png
-  artifactKey: Guid(efad3d03ba799b941819fc38572f2996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/Door_V1_Frame_Door_MetallicSmoothness.png using Guid(efad3d03ba799b941819fc38572f2996) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '9dbff1d13446823264cbd6d000a7c1a7') in 0.034623 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Abandoned_Asylum/Materials/Cupboard_Door.mat
-  artifactKey: Guid(a5a0ed70d9df3dd4b9c04e54d371f131) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/Cupboard_Door.mat using Guid(a5a0ed70d9df3dd4b9c04e54d371f131) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '5b90ebce6bee0827c4cce44e4e33628a') in 0.034581 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000071 seconds.
-  path: Assets/Abandoned_Asylum/Materials/Door_Frame.mat
-  artifactKey: Guid(efaf25d412a96c1489d5aa3458f8cb18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/Door_Frame.mat using Guid(efaf25d412a96c1489d5aa3458f8cb18) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '4fd6ef6bc2d5cd44798dab14ab5aa5b3') in 0.047768 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000069 seconds.
-  path: Assets/Abandoned_Asylum/Materials/Door_Frame_V3.mat
-  artifactKey: Guid(375f45b4e0719184fb0f6ce4d71a50e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/Door_Frame_V3.mat using Guid(375f45b4e0719184fb0f6ce4d71a50e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: 'e73f927754dedeaa23e6e567723d7eb1') in 0.051186 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Abandoned_Asylum/Prefabs/Door_V2.prefab
-  artifactKey: Guid(0f2f9c5303aac26479fc10d223f34183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Prefabs/Door_V2.prefab using Guid(0f2f9c5303aac26479fc10d223f34183) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '47764910239460f9aced3c8288a906a5') in 0.041530 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 18
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Abandoned_Asylum/Models/CaseMetallic.fbx
-  artifactKey: Guid(ebf1d1e987b0e2a44ab7a755cdba2b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Models/CaseMetallic.fbx using Guid(ebf1d1e987b0e2a44ab7a755cdba2b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '7bc5d280a345c6847269032e100e8451') in 0.400537 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 24
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Abandoned_Asylum/Materials/Door_V2.mat
-  artifactKey: Guid(2f3243e8161801b48a6a226468367dac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/Door_V2.mat using Guid(2f3243e8161801b48a6a226468367dac) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '02f9a11932064109f81f6adf2c5263f1') in 0.039154 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000077 seconds.
-  path: Assets/Abandoned_Asylum/Models/Cupboard.fbx
-  artifactKey: Guid(ae1057f934c75a249ae1a6462f310568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Models/Cupboard.fbx using Guid(ae1057f934c75a249ae1a6462f310568) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: 'b1c1c8ebf447cff303c4c4b4b1aced30') in 0.321497 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 36
-========================================================================
-Received Import Request.
-  Time since last request: 0.000058 seconds.
-  path: Assets/Abandoned_Asylum/Textures/Door_V1_Frame_Door_MetallicSmoothness 1.png
-  artifactKey: Guid(8efc8511106683142b0285160e9247b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/Door_V1_Frame_Door_MetallicSmoothness 1.png using Guid(8efc8511106683142b0285160e9247b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '5b60bb3e9188459a8c04ac98a12fc4b1') in 0.025931 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/Abandoned_Asylum/Models/Door_V1.fbx
-  artifactKey: Guid(30a37ce794ca1c94192e4d8721b12940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Models/Door_V1.fbx using Guid(30a37ce794ca1c94192e4d8721b12940) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '6c7113b542bb14727421aed240370519') in 0.162371 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 19
-========================================================================
-Received Import Request.
-  Time since last request: 0.000116 seconds.
-  path: Assets/Abandoned_Asylum/Materials/DoorD_Door.mat
-  artifactKey: Guid(8f76f2ad7cfaf6644b36ecbb9597d7f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/DoorD_Door.mat using Guid(8f76f2ad7cfaf6644b36ecbb9597d7f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '2a01600dfc0621aae9f1bde297c497de') in 0.149501 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/Abandoned_Asylum/Materials/MedRackDoor_V2.mat
-  artifactKey: Guid(a5cd5271702f7024fb6b0a4def110b66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/MedRackDoor_V2.mat using Guid(a5cd5271702f7024fb6b0a4def110b66) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '71a036e5b46a23eedebbb06be44c2bd9') in 0.157958 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 12.116342 seconds.
-  path: Assets/Abandoned_Asylum/Materials/PosterHuman.mat
-  artifactKey: Guid(0fa283d3600da034080183973be91b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/PosterHuman.mat using Guid(0fa283d3600da034080183973be91b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '4a5049f14b8e125a66122268e76276c2') in 0.201175 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Abandoned_Asylum/Prefabs/PosterHuman.prefab
-  artifactKey: Guid(de73a68374813224d9a0717c5b75fc05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Prefabs/PosterHuman.prefab using Guid(de73a68374813224d9a0717c5b75fc05) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: 'c959d2afd6d7c70ce079946d01218234') in 0.036775 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 8
-========================================================================
-Received Import Request.
-  Time since last request: 0.001420 seconds.
-  path: Assets/Abandoned_Asylum/Models/PosterHuman.fbx
-  artifactKey: Guid(18b964829d7e63b49b85e149d7384e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Models/PosterHuman.fbx using Guid(18b964829d7e63b49b85e149d7384e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '0b4d457ee158675cb92fa8f713aee70f') in 0.044377 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 8
-========================================================================
-Received Import Request.
-  Time since last request: 9.607351 seconds.
-  path: Assets/Abandoned_Asylum/Textures/PosterHuman_MetallicSmoothness.png
-  artifactKey: Guid(efe95a95408dd724caa73ef3c230cdd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/PosterHuman_MetallicSmoothness.png using Guid(efe95a95408dd724caa73ef3c230cdd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '5fce6a4920a000b7e0e28251f13b7244') in 0.001071 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 6.004582 seconds.
-  path: Assets/Abandoned_Asylum/Materials/MapFrame.mat
-  artifactKey: Guid(dfe74987f8e7e22448656d5ffc263c7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/MapFrame.mat using Guid(dfe74987f8e7e22448656d5ffc263c7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: 'c069a9f2c78719ecc56edee2ebd4db92') in 0.126202 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Abandoned_Asylum/Models/Map1stFloor.fbx
-  artifactKey: Guid(7de19b92a4602fa4d90d72c20e8cf6ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Models/Map1stFloor.fbx using Guid(7de19b92a4602fa4d90d72c20e8cf6ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '4e9341bf08846c89df00bdd94fb08b08') in 0.853069 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 18
-========================================================================
-Received Import Request.
-  Time since last request: 4.401147 seconds.
-  path: Assets/Abandoned_Asylum/Textures/MapFrame_MetallicSmoothness.png
-  artifactKey: Guid(ef66b358d7f6af64bb6e0a479f86563a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/MapFrame_MetallicSmoothness.png using Guid(ef66b358d7f6af64bb6e0a479f86563a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '63222086c1dcf0e425f5ba92dd8c87bc') in 0.001901 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 5.086355 seconds.
-  path: Assets/Abandoned_Asylum/Materials/Antlers.mat
-  artifactKey: Guid(aee2d02929bdd9549b3ff0fbf8951baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/Antlers.mat using Guid(aee2d02929bdd9549b3ff0fbf8951baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: 'fc3e568c5822953788645420efe8d1d9') in 0.275780 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Abandoned_Asylum/Models/Antlers_2.fbx
-  artifactKey: Guid(a190d0adaa92bb841aaaa5e1ea4b65d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Models/Antlers_2.fbx using Guid(a190d0adaa92bb841aaaa5e1ea4b65d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: 'bc7a3d499baaafd695c8d4b26fbb7f34') in 0.168821 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Abandoned_Asylum/Materials/Antlers_2.mat
-  artifactKey: Guid(00da1fbfb51bc0944bf70876e2b8031b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/Antlers_2.mat using Guid(00da1fbfb51bc0944bf70876e2b8031b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '51264baa59cc9a38fd40b767b08a6fba') in 0.047971 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Abandoned_Asylum/Materials/Antlers_Wood.mat
-  artifactKey: Guid(3e034cd96d9015a419c7b314fcd80914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/Antlers_Wood.mat using Guid(3e034cd96d9015a419c7b314fcd80914) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: 'b1705f9342cd185d1b4b11021f9e6f68') in 0.029972 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Abandoned_Asylum/Prefabs/Antlers.prefab
-  artifactKey: Guid(384b38a855788624e80965806ed237fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Prefabs/Antlers.prefab using Guid(384b38a855788624e80965806ed237fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: 'f3dd80336e4dbb957b58560a310c45f6') in 0.034962 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Abandoned_Asylum/Models/Antlers.fbx
-  artifactKey: Guid(bdf9d5b0bac0d704683c0569db0807f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Models/Antlers.fbx using Guid(bdf9d5b0bac0d704683c0569db0807f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: 'b773170e0580eb4724af641a3bd120dc') in 0.085433 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/Abandoned_Asylum/Prefabs/Antlers_2.prefab
-  artifactKey: Guid(8148e500f1efce1498d8a1a90cb66935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Prefabs/Antlers_2.prefab using Guid(8148e500f1efce1498d8a1a90cb66935) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: 'fd59a460d62f23f27a74a9e86b800dd0') in 0.040333 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 6.670264 seconds.
-  path: Assets/Abandoned_Asylum/Textures/Antlers_2_MetallicSmoothness.png
-  artifactKey: Guid(ef80c1062f5e197499345f663e316693) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/Antlers_2_MetallicSmoothness.png using Guid(ef80c1062f5e197499345f663e316693) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '314e0dad56ad123cc68e5efc8cab700a') in 0.000973 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 5.816912 seconds.
-  path: Assets/Abandoned_Asylum/Materials/ChairLeather.mat
-  artifactKey: Guid(b21496d9d639f0b418c95e114d1fd387) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Materials/ChairLeather.mat using Guid(b21496d9d639f0b418c95e114d1fd387) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: 'b295e2eaddc3a5673453b41151b65211') in 0.141975 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/Abandoned_Asylum/Prefabs/ChairLeather.prefab
-  artifactKey: Guid(e088750ece8e53b4187bc47462612e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Prefabs/ChairLeather.prefab using Guid(e088750ece8e53b4187bc47462612e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '574b453ec3a43de65b62a99d885f3cb1') in 0.048769 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000059 seconds.
-  path: Assets/Abandoned_Asylum/Models/ChairLeather.fbx
-  artifactKey: Guid(f22ee7c6c780e624aabb2458639b2551) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Models/ChairLeather.fbx using Guid(f22ee7c6c780e624aabb2458639b2551) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '89bcc754c6e2678f8552924ffa9ca079') in 0.055984 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 7.923441 seconds.
-  path: Assets/Abandoned_Asylum/Textures/ChairLeather_MetallicSmoothness.png
-  artifactKey: Guid(ef2044e531a42b94fa2147e6cebd7c93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/ChairLeather_MetallicSmoothness.png using Guid(ef2044e531a42b94fa2147e6cebd7c93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '5e139fcbad45bea50ae3b55028c411fe') in 0.003837 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 14.525072 seconds.
-  path: Assets/Abandoned_Asylum/Textures/BigBoiler_Normal.png
-  artifactKey: Guid(df6de4c0de62bb046a756d5fc7c35b86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Abandoned_Asylum/Textures/BigBoiler_Normal.png using Guid(df6de4c0de62bb046a756d5fc7c35b86) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '5b72590328ca0f5101c52f985f30673c') in 0.002977 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 44.124527 seconds.
-  path: Assets/Scenes/SampleScene.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
- -> (artifact id: '5170fe0caf88cd215122972ce3a47160') in 0.002568 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-BadImageFormatException: Format of the executable (.exe) or library (.dll) is invalid.
-  at Mono.Cecil.PE.ImageReader.ReadImage () [0x00026] in <a6860a9f6366437387ebdc1f225b7fd4>:0 
-  at Mono.Cecil.PE.ImageReader.ReadImage (Mono.Disposable`1[T] stream, System.String file_name) [0x00007] in <a6860a9f6366437387ebdc1f225b7fd4>:0 
-  at Mono.Cecil.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.Cecil.ReaderParameters parameters) [0x00006] in <a6860a9f6366437387ebdc1f225b7fd4>:0 
-  at Mono.Cecil.ModuleDefinition.ReadModule (System.String fileName, Mono.Cecil.ReaderParameters parameters) [0x0006c] in <a6860a9f6366437387ebdc1f225b7fd4>:0 
-  at Mono.Cecil.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.Cecil.ReaderParameters parameters) [0x00000] in <a6860a9f6366437387ebdc1f225b7fd4>:0 
-  at UnityEditor.AssemblyValidation.LoadAssemblyDefinitions (System.String[] assemblyPaths, System.String[] searchPaths) [0x00048] in <e0a2c8363ef54a6393fed120beebdb7a>:0 
-  at UnityEditor.AssemblyValidation.ValidateAssemblies (System.String[] assemblyPaths, System.Boolean enableLogging) [0x00007] in <e0a2c8363ef54a6393fed120beebdb7a>:0 
-
-Failed loading assembly Library/ScriptAssemblies/Unity.Timeline.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.Timeline.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/UnityEngine.UI.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/UnityEngine.UI.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/UnityEngine.TestRunner.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/UnityEngine.TestRunner.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.Timeline.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.Timeline.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.Settings.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.Settings.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.TextMeshPro.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.TextMeshPro.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.Core.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.Core.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/UnityEditor.UI.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/UnityEditor.UI.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.Rider.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.Rider.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.State.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.State.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VSCode.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VSCode.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/UnityEditor.TestRunner.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/UnityEditor.TestRunner.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll" reason: File does not contain a valid CIL image
-- Loaded All Assemblies, in  0.379 seconds
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.431 seconds
-Domain Reload Profiling: 809ms
-	BeginReloadAssembly (149ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (21ms)
-	RebuildCommonClasses (48ms)
-	RebuildNativeTypeToScriptingClass (27ms)
-	initialDomainReloadingComplete (47ms)
-	LoadAllAssembliesAndSetupDomain (106ms)
-		LoadAssemblies (194ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (7ms)
-			TypeCache.Refresh (5ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (432ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (290ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (6ms)
-			SetLoadedEditorAssemblies (5ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (77ms)
-			ProcessInitializeOnLoadAttributes (181ms)
-			ProcessInitializeOnLoadMethodAttributes (20ms)
-			AfterProcessingInitializeOnLoad (2ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Refreshing native plugins compatible for Editor in 5.26 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3110 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 1 unused Assets / (22.8 KB). Loaded Objects now: 3649.
-Memory consumption went from 114.1 MB to 114.0 MB.
-Total: 2.262500 ms (FindLiveObjects: 0.208500 ms CreateObjectMapping: 0.113100 ms MarkObjects: 1.917200 ms  DeleteObjects: 0.022500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-BadImageFormatException: Format of the executable (.exe) or library (.dll) is invalid.
-  at Mono.Cecil.PE.ImageReader.ReadImage () [0x00026] in <a6860a9f6366437387ebdc1f225b7fd4>:0 
-  at Mono.Cecil.PE.ImageReader.ReadImage (Mono.Disposable`1[T] stream, System.String file_name) [0x00007] in <a6860a9f6366437387ebdc1f225b7fd4>:0 
-  at Mono.Cecil.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.Cecil.ReaderParameters parameters) [0x00006] in <a6860a9f6366437387ebdc1f225b7fd4>:0 
-  at Mono.Cecil.ModuleDefinition.ReadModule (System.String fileName, Mono.Cecil.ReaderParameters parameters) [0x0006c] in <a6860a9f6366437387ebdc1f225b7fd4>:0 
-  at Mono.Cecil.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.Cecil.ReaderParameters parameters) [0x00000] in <a6860a9f6366437387ebdc1f225b7fd4>:0 
-  at UnityEditor.AssemblyValidation.LoadAssemblyDefinitions (System.String[] assemblyPaths, System.String[] searchPaths) [0x00048] in <e0a2c8363ef54a6393fed120beebdb7a>:0 
-  at UnityEditor.AssemblyValidation.ValidateAssemblies (System.String[] assemblyPaths, System.Boolean enableLogging) [0x00007] in <e0a2c8363ef54a6393fed120beebdb7a>:0 
-
-Failed loading assembly Library/ScriptAssemblies/Unity.Timeline.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.Timeline.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/UnityEngine.UI.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/UnityEngine.UI.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/UnityEngine.TestRunner.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/UnityEngine.TestRunner.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.Timeline.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.Timeline.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.Settings.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.Settings.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.TextMeshPro.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.TextMeshPro.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.Core.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.Core.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/UnityEditor.UI.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/UnityEditor.UI.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.Rider.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.Rider.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.State.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.State.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VSCode.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VSCode.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/UnityEditor.TestRunner.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/UnityEditor.TestRunner.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll" reason: File does not contain a valid CIL image
-Failed loading assembly Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll reason: File does not contain a valid CIL image
-Loading assembly failed: "Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll" reason: File does not contain a valid CIL image
-- Loaded All Assemblies, in  0.384 seconds
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.461 seconds
-Domain Reload Profiling: 846ms
-	BeginReloadAssembly (193ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (7ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (16ms)
-	RebuildCommonClasses (68ms)
-	RebuildNativeTypeToScriptingClass (22ms)
-	initialDomainReloadingComplete (30ms)
-	LoadAllAssembliesAndSetupDomain (71ms)
-		LoadAssemblies (187ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (6ms)
-			TypeCache.Refresh (4ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (462ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (323ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (5ms)
-			SetLoadedEditorAssemblies (6ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (75ms)
-			ProcessInitializeOnLoadAttributes (210ms)
-			ProcessInitializeOnLoadMethodAttributes (24ms)
+			BeforeProcessingInitializeOnLoad (296ms)
+			ProcessInitializeOnLoadAttributes (2946ms)
+			ProcessInitializeOnLoadMethodAttributes (179ms)
 			AfterProcessingInitializeOnLoad (3ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
-Refreshing native plugins compatible for Editor in 3.95 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (22ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.37 seconds
+Refreshing native plugins compatible for Editor in 6.19 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3111 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 1 unused Assets / (22.8 KB). Loaded Objects now: 3649.
-Memory consumption went from 114.3 MB to 114.3 MB.
-Total: 6.702800 ms (FindLiveObjects: 0.390700 ms CreateObjectMapping: 0.543300 ms MarkObjects: 5.686600 ms  DeleteObjects: 0.079100 ms)
+Unloading 3142 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 19 unused Assets / (55.0 KB). Loaded Objects now: 3609.
+Memory consumption went from 122.6 MB to 122.5 MB.
+Total: 6.566600 ms (FindLiveObjects: 0.337000 ms CreateObjectMapping: 0.250500 ms MarkObjects: 5.853100 ms  DeleteObjects: 0.124000 ms)
 
-Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 707211.575763 seconds.
+  path: Assets/UI/blood/blood-splatter-png-44466.png
+  artifactKey: Guid(587b8c26eb4d49c4ebc37c914d81c265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/blood/blood-splatter-png-44466.png using Guid(587b8c26eb4d49c4ebc37c914d81c265) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '29d5e808f12a8e77172ddb629b28dad2') in 0.110659 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
