@@ -6,6 +6,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject projectilePrefab; // prefab of bullet to be fired 
+
+    public Gun projectileAnchor; // location on John's model he fires from -> handles Shoot() method
+    public float projectileSpeed = 40;
+
     // Use to store player input
     private Vector2 playerInput;
     private Vector3 playerVelocity;
@@ -16,10 +21,10 @@ public class PlayerController : MonoBehaviour
     // Fill out field in inspector
     [SerializeField] CharacterController controller;
 
-    // Player speed adjustment value. Modify in inspector for quick prototyping.
+    // Player speed adjustment value.
     [SerializeField] private float playerSpeed = 1.5f;
 
-    // Player rotation speed adjustement. Modify in inspector for quick prototyping.
+    // Player rotation speed adjustement
     [SerializeField] private float playerRotation = 100f;
 
     [SerializeField] private float gravityValue = -9.81f;
@@ -104,5 +109,15 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         PlayerMovement();
+
+        if (checkForAim())
+        {
+            // handles aiming and firing
+            projectileAnchor.Aim();
+        }
+        else
+        {
+            projectileAnchor.StopAiming(); // hides laser sight
+        }
     }
 }
