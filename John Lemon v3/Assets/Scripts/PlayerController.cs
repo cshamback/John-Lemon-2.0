@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-// Needed to access input system library
+// Needed to access input system library for player movement
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject projectilePrefab; // prefab of bullet to be fired 
-
-    public Gun projectileAnchor; // location on John's model he fires from -> handles Shoot() method
+    public GameObject gunGO; // location on John's model he fires from
+    public Gun projectileAnchor; // handles Shoot() method
     public float projectileSpeed = 40;
+
+    // amount the player is able to move the laser sight up or down while aiming 
+    public float anchorVerticalRange = 0.01f;
+    public Vector3 anchorOriginalPosition; // position of gun GameObject - throws an error if i try to set it up here. gets init in start()
 
     // Use to store player input
     private Vector2 playerInput;
@@ -62,12 +66,13 @@ public class PlayerController : MonoBehaviour
         // if aiming, don't allow movement
         // just do animations
         if (isAiming)
-        {
-            // call laser class to do laser sight stuff
-
-            // do animation
+        {   // do animation
             animator.SetBool("isAiming", true);
             animator.SetBool("IsWalking", false);
+
+            /*Debug.Log("Anchor original position: " + anchorOriginalPosition +
+                " Anchor current position: " + projectileAnchor.transform.position +
+                " Anchor local position: " + projectileAnchor.transform.localPosition);*/
         }
         else // not aiming: allow movement! Also, set animations
         {
@@ -103,6 +108,10 @@ public class PlayerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
+
+        // localPosition is position relative to parent, not world
+        anchorOriginalPosition = gunGO.transform.localPosition; // position to return to when not aiming
+        projectileAnchor.transform.localPosition = anchorOriginalPosition; // enter this position on start
     }
 
     // Update is called once per frame
@@ -112,12 +121,35 @@ public class PlayerController : MonoBehaviour
 
         if (checkForAim())
         {
-            // handles aiming and firing
+            // handles laser sight and firing
             projectileAnchor.Aim();
+            // allow player to move gun up/down with W and S only when aiming
+
+            if (Input.GetKey(KeyCode.W))
+            { // move projectileAnchor up, within limit
+                print("Aiming up.");
+                if (projectileAnchor.transform.localPosition.z < anchorOriginalPosition.z + anchorVerticalRange)
+                {
+                    projectileAnchor.transform.localPosition += new Vector3(0, 0, 0.0005f);
+                    print("Current position: " + projectileAnchor.transform.localPosition.z +
+                        "Upper range: " + (anchorOriginalPosition.z + anchorVerticalRange));
+                }
+            }
+            else if (Input.GetKey(KeyCode.S))
+            { // move projectileAnchor down, within limit
+                print("Aiming down.");
+                if (projectileAnchor.transform.localPosition.z > anchorOriginalPosition.z - anchorVerticalRange)
+                {
+                    projectileAnchor.transform.localPosition -= new Vector3(0, 0, 0.0005f);
+                    print("Current position: " + projectileAnchor.transform.localPosition.z +
+                        "Lower range: " + (anchorOriginalPosition.z - anchorVerticalRange));
+                }
+            }
         }
         else
         {
             projectileAnchor.StopAiming(); // hides laser sight
+            projectileAnchor.transform.localPosition = anchorOriginalPosition; // puts gun back after player done aiming
         }
     }
 }

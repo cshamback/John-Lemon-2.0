@@ -12,7 +12,8 @@ public class Gun : MonoBehaviour
     public float damage = 10f;
     public float range = 100f; // how far player can shoot
 
-    public GameObject parent; // where the projectile comes from (projectileAnchor)
+    public GameObject john; // John Lemon > has rotation values (john's components rotate relative to him, which is to say not at all)
+    public GameObject anchor; // the gun has the position to shoot from (but not rotation for some reason)
     public GameObject sight; // sphere placed on whatever is being aimed at
 
     // Start is called before the first frame update
@@ -36,8 +37,11 @@ public class Gun : MonoBehaviour
     {
         RaycastHit hit;
 
-        Vector3 origin = parent.transform.position;
-        Vector3 direction = parent.transform.forward;
+        Vector3 origin = anchor.transform.position;
+        Vector3 direction = john.transform.forward;
+
+        Debug.DrawLine(origin, origin + direction * range, Color.black);
+        //print("Parent position: " + parent.transform.position);
 
         //start at player position, shoot out ray
         if (Physics.Raycast(origin, direction, out hit, range))
