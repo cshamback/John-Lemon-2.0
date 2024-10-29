@@ -27,9 +27,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3406860342912314804}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000009233703, y: -0.7071068, z: -0.70710677, w: 0.00000009595048}
-  m_LocalPosition: {x: 0.0024, y: 0.002, z: 0}
-  m_LocalScale: {x: 0.0025, y: 0.0025, z: 0.0025}
+  m_LocalRotation: {x: -0.000000092337025, y: -0.7071069, z: -0.7071067, w: 0.00000009595048}
+  m_LocalPosition: {x: 0.0024, y: 0.0019999938, z: 0}
+  m_LocalScale: {x: 0.0024999995, y: 0.0024999997, z: 0.0024999997}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4901361381447207058}
@@ -98,7 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   range: 100
-  parent: {fileID: 3406860342912314804}
+  parent: {fileID: 2439821960192391417}
+  sight: {fileID: 0}
 --- !u!1001 &1836035687693152975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -253,9 +254,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c623f5212498e154f83604ae799d32e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 1504368567622396644, guid: 0dc09c0a7a010af42b84a4504726b6c6, type: 3}
   projectileAnchor: {fileID: 3157752912501557841}
   projectileSpeed: 40
+  anchorVerticalRange: 0.002
+  anchorOriginalPosition: {x: 0.0024, y: 0.002, z: -0.0013}
   controller: {fileID: 6933664510906700797}
   playerSpeed: 2
   playerRotation: 80
@@ -308,6 +310,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2439821960192391417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4080566512360163894, guid: e10ae14f76c60c644bfafd99b9553b3e, type: 3}
+  m_PrefabInstance: {fileID: 1836035687693152975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4901361381447207058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6737326286707456605, guid: e10ae14f76c60c644bfafd99b9553b3e, type: 3}
