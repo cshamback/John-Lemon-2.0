@@ -98,7 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   range: 100
-  parent: {fileID: 2439821960192391417}
+  john: {fileID: 1565987592203063198}
+  anchor: {fileID: 3406860342912314804}
   sight: {fileID: 0}
 --- !u!1001 &1836035687693152975
 PrefabInstance:
@@ -254,6 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c623f5212498e154f83604ae799d32e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gunGO: {fileID: 0}
   projectileAnchor: {fileID: 3157752912501557841}
   projectileSpeed: 40
   anchorVerticalRange: 0.002
@@ -310,11 +312,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &2439821960192391417 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4080566512360163894, guid: e10ae14f76c60c644bfafd99b9553b3e, type: 3}
-  m_PrefabInstance: {fileID: 1836035687693152975}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4901361381447207058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6737326286707456605, guid: e10ae14f76c60c644bfafd99b9553b3e, type: 3}
