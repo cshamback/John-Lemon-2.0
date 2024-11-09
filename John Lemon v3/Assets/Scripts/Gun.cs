@@ -12,7 +12,7 @@ using Unity.VisualScripting;
 
 public class Gun : MonoBehaviour
 {
-    public float damage = 10f;
+    public int damage = 10;
     public float range = 100f; // how far player can shoot
     public int totalAmmo = 0;
     public int currentLoaded = 0;
@@ -45,10 +45,7 @@ public class Gun : MonoBehaviour
         // reloading does not change the total count of ammo, only moves stuff around 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            print("Reloading!");
-
             // do math: 
-            // look guys idk gun vocabulary im sorry 
             if (totalAmmo <= maxAmmo) // if current total ammo is less than what can be loaded, load all of it
             {
                 // set amountLoaded to ammoCount, keep ammoCount the same
@@ -95,14 +92,13 @@ public class Gun : MonoBehaviour
         Vector3 origin = anchor.transform.position;
         Vector3 direction = john.transform.forward;
 
-        //Debug.DrawLine(origin, origin + direction * range, Color.black);
+        Debug.DrawLine(origin, origin + direction * range, Color.black);
         //print("Parent position: " + parent.transform.position);
 
         // even if not hitting anything, still decrease ammo if fire button pushed
         // decrease ammo by 1 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (currentLoaded > 0 && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
         {
-            //print("Current loaded: " + currentLoaded + " total ammo: " + totalAmmo);
             currentLoaded -= 1;
             totalAmmo -= 1;
             UpdateAmmoHUD(totalAmmo, currentLoaded);
@@ -111,6 +107,8 @@ public class Gun : MonoBehaviour
         //start at player position, shoot out ray
         if (Physics.Raycast(origin, direction, out hit, range))
         {
+            //print("Aiming at object: " + hit.transform.name + " tag: " + hit.transform.tag);
+
             // put laser sight on whatever is in the way
             // endpoint = (origin + direction * range)
             sight.SetActive(true);
@@ -120,17 +118,24 @@ public class Gun : MonoBehaviour
             // handle impact
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
             {
-                print("Pressed space.");
                 if (currentLoaded > 0) // have to actually have ammo in order to shoot 
                 {
-                    print("Shot. Ammo > 0");
+                    print("Hit something!");
                     switch (hit.transform.tag)
                     {
                         case "Target":
-                            print("Target hit.");
-
                             // target should have its own class.
-                            // targets destroyed on hit, with vfx
+                            // targets destroyed on hit, with vfx - this is handled in Target.GetShot()
+                            Target target = hit.transform.gameObject.GetComponent<Target>();
+                            if (target != null)
+                            {
+                                print("Target found by Gun raycast.");
+                                target.GetShot(damage);
+                            }
+                            else
+                            {
+                                Debug.LogError("Could not find Target on gameObject " + hit.transform.gameObject.name);
+                            }
 
                             break;
                         case "Enemy":
@@ -142,6 +147,8 @@ public class Gun : MonoBehaviour
                             break;
                         default:
                             // default is something we don't care about, so ignore the hit
+                            Debug.LogError("Hit unclassified object: " + hit.transform.gameObject.name +
+                                " Tag: " + hit.transform.gameObject.tag);
                             break;
                     }
 
