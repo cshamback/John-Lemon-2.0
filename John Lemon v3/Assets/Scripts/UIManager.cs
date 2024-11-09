@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject readableObject;
     public GameObject credits;
+    public GameObject hud;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,8 @@ public class UIManager : MonoBehaviour
         pauseMenu.SetActive(false);
         readableObject.SetActive(false);
         credits.SetActive(false);
+
+        hud.SetActive(true); // HUD is active while playing
     }
 
     // Update is called once per frame
@@ -36,5 +39,7 @@ public class UIManager : MonoBehaviour
 
         Time.timeScale = 1.0f;
         PauseMenu.isPaused = false;
+
+        hud.SetActive(true);
     }
 }

@@ -121,6 +121,7 @@ public class PlayerController : MonoBehaviour
 
         if (checkForAim())
         {
+            print("Aiming - playerController");
             // handles laser sight and firing
             projectileAnchor.Aim();
             // allow player to move gun up/down with W and S only when aiming

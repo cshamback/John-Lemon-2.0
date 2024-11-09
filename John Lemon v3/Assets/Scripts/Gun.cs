@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
+using TMPro;
+using Unity.VisualScripting;
 
 // this script is attached to the ProjectileAnchor gameobject
 // this can be attached to a gun mesh, or in the absense of a gun John himself. 
@@ -11,21 +14,72 @@ public class Gun : MonoBehaviour
 {
     public float damage = 10f;
     public float range = 100f; // how far player can shoot
+    public int totalAmmo = 0;
+    public int currentLoaded = 0;
 
     public GameObject john; // John Lemon > has rotation values (john's components rotate relative to him, which is to say not at all)
     public GameObject anchor; // the gun has the position to shoot from (but not rotation for some reason)
     public GameObject sight; // sphere placed on whatever is being aimed at
 
+    // HUD ammo info is updated by the gun, since the gun keeps track of its own ammo 
+    public GameObject hud;
+    public TextMeshProUGUI currentLoadedText;
+    public TextMeshProUGUI totalAmmoText;
+
+    public int maxAmmo;
+
     // Start is called before the first frame update
     void Start()
     {
         sight.SetActive(false);
+        hud.SetActive(true);
+
+        currentLoadedText.text = "0";
+        totalAmmoText.text = "0";
     }
 
     // Update is called once per frame
     void Update()
     {
+        // todo: add check if there is anything to reload 
+        // reloading does not change the total count of ammo, only moves stuff around 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            print("Reloading!");
 
+            // do math: 
+            // look guys idk gun vocabulary im sorry 
+            if (totalAmmo <= maxAmmo) // if current total ammo is less than what can be loaded, load all of it
+            {
+                // set amountLoaded to ammoCount, keep ammoCount the same
+                print("Loading all ammo: " + totalAmmo);
+                currentLoaded = totalAmmo;
+                currentLoadedText.text = totalAmmo.ToString();
+            }
+            else // more ammo than can be loaded at one time: 
+            {
+                // load the max amount of ammo, keep ammoCount the same 
+                int diff = maxAmmo - currentLoaded;
+                print("Loading " + diff + " ammo to get a total of " + maxAmmo);
+                currentLoaded = maxAmmo;
+                currentLoadedText.text = currentLoaded.ToString();
+            }
+        }
+    }
+
+    public void UpdateAmmoHUD(int total, int loaded)
+    {
+        totalAmmoText.text = total.ToString();
+        currentLoadedText.text = loaded.ToString();
+    }
+
+    // called by Interactible with type Ammo 
+    public void PickUpAmmo(int count)
+    {
+        print("Picked up ammo.");
+
+        totalAmmo += count;
+        totalAmmoText.text = totalAmmo.ToString();
     }
 
     public void StopAiming()
@@ -33,6 +87,7 @@ public class Gun : MonoBehaviour
         sight.SetActive(false);
     }
 
+    // called by PlayerController on John 
     public void Aim()
     {
         RaycastHit hit;
@@ -40,8 +95,18 @@ public class Gun : MonoBehaviour
         Vector3 origin = anchor.transform.position;
         Vector3 direction = john.transform.forward;
 
-        Debug.DrawLine(origin, origin + direction * range, Color.black);
+        //Debug.DrawLine(origin, origin + direction * range, Color.black);
         //print("Parent position: " + parent.transform.position);
+
+        // even if not hitting anything, still decrease ammo if fire button pushed
+        // decrease ammo by 1 
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        {
+            //print("Current loaded: " + currentLoaded + " total ammo: " + totalAmmo);
+            currentLoaded -= 1;
+            totalAmmo -= 1;
+            UpdateAmmoHUD(totalAmmo, currentLoaded);
+        }
 
         //start at player position, shoot out ray
         if (Physics.Raycast(origin, direction, out hit, range))
@@ -55,25 +120,35 @@ public class Gun : MonoBehaviour
             // handle impact
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
             {
-                switch (hit.transform.tag)
+                print("Pressed space.");
+                if (currentLoaded > 0) // have to actually have ammo in order to shoot 
                 {
-                    case "Target":
-                        print("Target hit.");
+                    print("Shot. Ammo > 0");
+                    switch (hit.transform.tag)
+                    {
+                        case "Target":
+                            print("Target hit.");
 
-                        // target should have its own class.
-                        // targets destroyed on hit, with vfx
+                            // target should have its own class.
+                            // targets destroyed on hit, with vfx
 
-                        break;
-                    case "Enemy":
-                        print("Enemy hit.");
+                            break;
+                        case "Enemy":
+                            print("Enemy hit.");
 
-                        // enemies have their own classes
-                        // they take damage based on the current gun equipped 
+                            // enemies have their own classes
+                            // they take damage based on the current gun equipped 
 
-                        break;
-                    default:
-                        // default is something we don't care about, so ignore the hit
-                        break;
+                            break;
+                        default:
+                            // default is something we don't care about, so ignore the hit
+                            break;
+                    }
+
+                    // decrease ammo by 1 
+                    currentLoaded -= 1;
+                    totalAmmo -= 1;
+                    UpdateAmmoHUD(totalAmmo, currentLoaded);
                 }
             }
         }
