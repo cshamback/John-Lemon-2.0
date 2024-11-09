@@ -11,6 +11,10 @@ public enum eObjectType { readableObject, ammo, weapon }
 public class Interactible : MonoBehaviour
 {
     public GameObject john; // used to get john's position and decide if close enough
+    [SerializeField]
+    private Gun gun;
+    public int ammoAmount;
+
     public cakeslice.Outline outline; // used to turn outline on and off
 
     public eObjectType type;
@@ -21,6 +25,8 @@ public class Interactible : MonoBehaviour
     void Start()
     {
         tooltipText.enabled = false;
+
+        gun = john.GetComponentInChildren<Gun>(); // one of john's children has the gun gameobject 
     }
 
     // Update is called once per frame
@@ -54,6 +60,17 @@ public class Interactible : MonoBehaviour
                         break;
                     case eObjectType.ammo:
                         print("Ammo selected.");
+
+                        // deal with ammo being picked up 
+                        if (ammoAmount > 0)
+                        {
+                            gun.PickUpAmmo(ammoAmount);
+                            print("From interactible: John picked up ammo amount " + ammoAmount);
+                        }
+                        else
+                        {
+                            Debug.LogError("Tried to pick up ammo from object " + this.gameObject.name + ", but ammo amount is " + ammoAmount);
+                        }
 
                         // ammo cannot be picked up again 
                         Destroy(gameObject);
