@@ -25120,11 +25120,15 @@
       "ActionType": "WriteFile",
 <<<<<<< HEAD
       "PayloadOffset": 1697871,
+<<<<<<< HEAD
       "PayloadLength": 32976,
 =======
       "PayloadOffset": 1750472,
       "PayloadLength": 33045,
 >>>>>>> pr/5
+=======
+      "PayloadLength": 33003,
+>>>>>>> a33ca46230fa3666f7700e3543b41013e1da0052
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
@@ -25141,10 +25145,14 @@
       "DisplayName": "Writing Assembly-CSharp.rsp2",
       "ActionType": "WriteFile",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "PayloadOffset": 1730934,
 =======
       "PayloadOffset": 1783604,
 >>>>>>> pr/5
+=======
+      "PayloadOffset": 1730961,
+>>>>>>> a33ca46230fa3666f7700e3543b41013e1da0052
       "PayloadLength": 0,
       "PayloadDebugContentSnippet": "",
       "Inputs": [],
@@ -25411,6 +25419,7 @@
         "Assets/Scripts/PlayerController.cs",
         "Assets/Scripts/Projectile.cs",
         "Assets/Scripts/ReadableObject.cs",
+        "Assets/Scripts/Target.cs",
         "Assets/Scripts/UIManager.cs",
         "C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll",
@@ -25815,7 +25824,11 @@
       "DisplayName": "Writing Assembly-CSharp.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "PayloadOffset": 1731030,
+=======
+      "PayloadOffset": 1731057,
+>>>>>>> a33ca46230fa3666f7700e3543b41013e1da0052
       "PayloadLength": 9614,
 =======
       "PayloadOffset": 1783700,

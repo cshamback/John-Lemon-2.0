@@ -98,6 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   range: 100
+  ammoCount: 0
+  currentAmmo: 0
   john: {fileID: 1565987592203063198}
   anchor: {fileID: 3406860342912314804}
   sight: {fileID: 0}
@@ -111,7 +113,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e10ae14f76c60c644bfafd99b9553b3e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.92
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e10ae14f76c60c644bfafd99b9553b3e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -119,7 +121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e10ae14f76c60c644bfafd99b9553b3e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.49
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e10ae14f76c60c644bfafd99b9553b3e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -255,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c623f5212498e154f83604ae799d32e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunGO: {fileID: 0}
+  gunGO: {fileID: 3406860342912314804}
   projectileAnchor: {fileID: 3157752912501557841}
   projectileSpeed: 40
   anchorVerticalRange: 0.002
