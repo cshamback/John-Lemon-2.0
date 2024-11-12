@@ -25,21 +25,36 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape) && credits.activeInHierarchy)
+        if (Input.GetKeyUp(KeyCode.Escape))
         {
-            CloseCredits();
+            if (credits.activeInHierarchy)
+            {
+                CloseOpenUI(credits);
+            }
+            if (readableObject.activeInHierarchy)
+            {
+                CloseOpenUI(readableObject);
+            }
+        }
+
+        // readableObject UI is opened by another class (Interactible)
+        // as such, UIManager must check if it is open and if so close HUD
+        if (readableObject.activeInHierarchy)
+        {
+            hud.SetActive(false);
+            Time.timeScale = 0f;
         }
 
     }
 
-    public void CloseCredits()
+    public void CloseOpenUI(GameObject ui)
     {
-        print("Hiding credits.");
-        credits.SetActive(false);
-
         Time.timeScale = 1.0f;
-        PauseMenu.isPaused = false;
 
+        PauseMenu.isPaused = false;
+        PauseMenu.allowedToPause = false;
+
+        ui.SetActive(false);
         hud.SetActive(true);
     }
 }

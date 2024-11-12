@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// handles switching pages 
+
 public class ReadableObject : MonoBehaviour
 {
     // only one of these can be non-null

@@ -10,16 +10,21 @@ public enum eObjectType { readableObject, ammo, weapon }
 
 public class Interactible : MonoBehaviour
 {
+    [Header("General")]
+    public cakeslice.Outline outline; // used to turn outline on and off
+    public eObjectType type;
+    public TextMeshProUGUI tooltipText;
+
+    [Header("Ammo and Weapons Only: ")]
     public GameObject john; // used to get john's position and decide if close enough
     [SerializeField]
     private Gun gun;
     public int ammoAmount;
 
-    public cakeslice.Outline outline; // used to turn outline on and off
-
-    public eObjectType type;
-
-    public TextMeshProUGUI tooltipText;
+    [Header("Readable Objects Only: ")]
+    public Sprite readableImage; // the image to use
+    public Image readableCanvasImage; // the place for the image to go 
+    public GameObject readableCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -54,8 +59,9 @@ public class Interactible : MonoBehaviour
                     case eObjectType.readableObject:
                         print("Readable object selected.");
 
-                        // open readableObject ui with correct contents
-                        // can be text or image 
+                        // open readableObject ui with correct image
+                        readableCanvasImage.sprite = readableImage;
+                        readableCanvas.SetActive(true);
 
                         break;
                     case eObjectType.ammo:
