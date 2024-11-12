@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
 {
     public GameObject gunGO; // location on John's model he fires from
     public Gun projectileAnchor; // handles Shoot() method
-    public float projectileSpeed = 40;
 
     // amount the player is able to move the laser sight up or down while aiming 
     public float anchorVerticalRange = 0.01f;

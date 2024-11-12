@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool isPaused = false;
+    public static bool allowedToPause = true; // make sure exiting another menu with esc doesnt also pause 
 
     public GameObject pauseMenu;
     public GameObject credits;
@@ -27,13 +28,19 @@ public class PauseMenu : MonoBehaviour
             { // resume
                 Resume();
             }
-            else
+            else if (allowedToPause) // only pause if not closing something else
             { // pause
                 pauseMenu.SetActive(true);
                 Time.timeScale = 0.0f;
 
                 isPaused = true;
             }
+        }
+
+        // flipping this back AFTER checking for pause makes sure it skips the pause signal only once
+        if (!allowedToPause)
+        {
+            allowedToPause = true;
         }
     }
 
