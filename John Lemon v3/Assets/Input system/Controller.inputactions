@@ -83,6 +83,34 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "LockControls",
+            "id": "97602fc1-9242-4e81-9c82-d4e5fb028131",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "d5823fd3-a1ff-417b-beb9-4a6901ceaa7b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bcc5c996-44dc-4bdc-a757-a213da53b95f",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
