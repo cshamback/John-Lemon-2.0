@@ -364,6 +364,7 @@
 "Assets/Input system/PlayerController.cs"
 "Assets/Scripts/Crawler.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/Observer.cs"
 "Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/ReadableObject.cs"
 "Assets/Scripts/UIManager.cs"
