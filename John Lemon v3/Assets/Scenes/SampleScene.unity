@@ -7764,11 +7764,31 @@ PrefabInstance:
       propertyPath: currentLoadedText
       value: 
       objectReference: {fileID: 1493653637}
+    - target: {fileID: 3406860342912314804, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: m_TagString
+      value: EquippedGun
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+--- !u!1 &730114575 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1565987592203063198, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+  m_PrefabInstance: {fileID: 730114574}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &730114576 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+  m_PrefabInstance: {fileID: 730114574}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb6b8f9ae569d342af800f11470320a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &730827288
 GameObject:
   m_ObjectHideFlags: 0
@@ -8717,6 +8737,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e05f74f0a835ada4ba676564999f593e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  john: {fileID: 730114575}
+  gun: {fileID: 730114576}
+  currentScene: SampleScene
+  sceneSwitcher: {fileID: 976714555}
+  savedLoadedAmmo: 0
+  savedTotalAmmo: 0
 --- !u!1 &832910546
 GameObject:
   m_ObjectHideFlags: 0
@@ -9600,7 +9626,6 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   - component: {fileID: 963194230}
   m_Layer: 6
   m_Name: _MainCam
@@ -9683,18 +9708,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 18.166, y: -50.82, z: 0}
---- !u!114 &963194229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e05f74f0a835ada4ba676564999f593e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9916,6 +9929,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newScene: TargetPractice2
+  currentScene: 
+  numTargets: 0
 --- !u!1 &994765529
 GameObject:
   m_ObjectHideFlags: 0

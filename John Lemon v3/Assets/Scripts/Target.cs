@@ -46,6 +46,8 @@ public class Target : MonoBehaviour
 
         if (numHits <= 0)
         {
+            print("Calling RemoveTarget() from Target.");
+            GameManager.sGameManager.RemoveTarget(); // tell gameobject there is one less target
             gameObject.SetActive(false); // destroying causes issues. dont do that 
         }
     }
