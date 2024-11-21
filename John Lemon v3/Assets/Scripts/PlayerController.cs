@@ -151,4 +151,10 @@ public class PlayerController : MonoBehaviour
             projectileAnchor.transform.localPosition = anchorOriginalPosition; // puts gun back after player done aiming
         }
     }
+
+    // used by SceneSwitcher/GameManager to get gun's data
+    public GameObject GetGun()
+    {
+        return gunGO;
+    }
 }

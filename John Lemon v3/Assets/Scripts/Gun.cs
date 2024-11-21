@@ -120,7 +120,7 @@ public class Gun : MonoBehaviour
             {
                 if (currentLoaded > 0) // have to actually have ammo in order to shoot 
                 {
-                    print("Hit something!");
+                    //print("Hit something!");
                     switch (hit.transform.tag)
                     {
                         case "Target":
