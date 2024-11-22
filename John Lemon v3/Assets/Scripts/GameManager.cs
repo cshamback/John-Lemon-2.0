@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager sGameManager; // singleton - one GM to control entire game
+    public bool tutorialComplete = false;
 
     [SerializeField]
     private GameObject john;
@@ -23,7 +24,6 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        print("Awake called for gamemanager. Current scene: " + SceneManager.GetActiveScene().name);
         if (sGameManager)
         {
             Destroy(this);
@@ -40,9 +40,6 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        print("Scene loaded: " + scene.name);
-        print("Active scene: " + SceneManager.GetActiveScene().name);
-
         if (scene.name != SceneManager.GetActiveScene().name)
         {
             Debug.LogError("Loaded scene does not match active scene.");
@@ -59,25 +56,34 @@ public class GameManager : MonoBehaviour
             sceneSwitcher.currentScene = scene.name;
             // in the tutorial scene, we change scenes (back to the first scene)
             // when john has shot all the targets
-            if (sceneSwitcher.currentScene == "TargetPractice2")
+            if (scene.name == "TargetPractice2")
             {
-                print("GameManager: Current scene is TargetPractice2.");
                 sceneSwitcher.numTargets = 5;
                 sceneSwitcher.newScene = "SampleScene";
 
                 gun.totalAmmo = 1000;
-            }
-            else
-            {
-                sceneSwitcher.numTargets = -1;
+                gun.currentLoaded = 0; // we want to explicitly force the player to reload
 
-                gun.totalAmmo = savedTotalAmmo;
-                gun.currentLoaded = savedLoadedAmmo;
+                // this is used to turn off the tutorial trigger later! 
+                tutorialComplete = true;
+
+                john.transform.position = new Vector3(0, 0, 0);
             }
         }
         else
         {
-            Debug.LogError("Sceneswitcher not found in scene: " + scene.name);
+            print("Sceneswitcher not found in scene: " + scene.name);
+        }
+
+        // for the first two scene initializations, keep john where he is
+        // for the last one, put him where he was right before transition to tutorial scene.
+        // also restore his ammo from that point 
+        if (tutorialComplete && scene.name != "TargetPractice2")
+        {
+            gun.totalAmmo = savedTotalAmmo;
+            gun.currentLoaded = savedLoadedAmmo;
+
+            john.transform.position = savedPosition;
         }
     }
 
@@ -89,7 +95,6 @@ public class GameManager : MonoBehaviour
 
     public void RemoveTarget()
     {
-        print("RemoveTarget(). Now calling sceneSwitcher.");
         sceneSwitcher.numTargets--;
     }
 

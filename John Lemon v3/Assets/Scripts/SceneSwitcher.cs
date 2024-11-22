@@ -23,23 +23,20 @@ public class SceneSwitcher : MonoBehaviour
     [Header("Tutorial Scene Data")]
     public int numTargets; // current number of active targets
 
-    // called AFTER scenemanager.loadscene is fully finished
-    void Start()
-    {
-        // once new scene has loaded, set the active scene to the current scene name.
-        // this allows the gamemanager to figure out what the current scene is and act accordingly.
-        //SceneManager.SetActiveScene(SceneManager.GetSceneByName(currentScene));
-        print("SceneSwitcher start method called.");
-    }
-
     // Update is called once per frame
     void Update()
     {
         // if in the tutorial and john has shot all the targets, return!
         if (currentScene == "TargetPractice2" && numTargets <= 0)
         {
-            print("Changing scenes.");
             ChangeScenes(null, false); // don't need to pass in a John GO because we're not saving his data
+        }
+
+        // if this is the tutorial trigger and the tutorial is complete, disable trigger
+        if (GameManager.sGameManager.tutorialComplete && gameObject.name == "TutorialCollider")
+        {
+            print("Setting gameObject false on gameObject named " + gameObject.name);
+            gameObject.SetActive(false);
         }
     }
 
@@ -47,6 +44,7 @@ public class SceneSwitcher : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            print("Player hit collider!!");
             ChangeScenes(other.gameObject, true);
         }
     }
@@ -59,9 +57,12 @@ public class SceneSwitcher : MonoBehaviour
         // ProjectileAnchor is a grandchild of John.
         if (saveData)
         {
-            GameManager.sGameManager.savedLoadedAmmo = john.gameObject.GetComponentInChildren<Gun>().currentLoaded;
-            GameManager.sGameManager.savedTotalAmmo = john.gameObject.GetComponentInChildren<Gun>().totalAmmo;
-            GameManager.sGameManager.savedPosition = john.transform.position;
+            print("Saving data from SceneSwitcher for scene: " + currentScene);
+            GameManager.sGameManager.savedLoadedAmmo = john.GetComponentInChildren<Gun>().currentLoaded;
+            GameManager.sGameManager.savedTotalAmmo = john.GetComponentInChildren<Gun>().totalAmmo;
+            GameManager.sGameManager.savedPosition = john.transform.localPosition;
+
+            print("Saved position: " + GameManager.sGameManager.savedPosition);
         }
 
         // ---- CHANGE SCENES ----
