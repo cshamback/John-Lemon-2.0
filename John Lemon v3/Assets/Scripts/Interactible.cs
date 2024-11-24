@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 using UnityEngine.UI;
 using TMPro;
 
-public enum eObjectType { readableObject, ammo, weapon }
+public enum eObjectType { readableObject, ammo, weapon, door }
 
 public class Interactible : MonoBehaviour
 {
@@ -25,6 +25,9 @@ public class Interactible : MonoBehaviour
     public Sprite readableImage; // the image to use
     public Image readableCanvasImage; // the place for the image to go 
     public GameObject readableCanvas;
+
+    [Header("Doors only: ")]
+    public GameObject door;
 
     // Start is called before the first frame update
     void Start()
@@ -71,7 +74,6 @@ public class Interactible : MonoBehaviour
                         if (ammoAmount > 0)
                         {
                             gun.PickUpAmmo(ammoAmount);
-                            print("From interactible: John picked up ammo amount " + ammoAmount);
                         }
                         else
                         {

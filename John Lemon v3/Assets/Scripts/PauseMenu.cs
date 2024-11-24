@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -70,7 +69,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         print("Resumed, motherfucker");
-        pauseMenu.SetActive(false);
+        UIManager.S.SetVisibility(pauseMenu, UIManager.S.pauseMenuOpen);
         Time.timeScale = 1.0f;
 
         isPaused = false;
@@ -80,8 +79,8 @@ public class PauseMenu : MonoBehaviour
     {
         print("Show credits.");
 
-        pauseMenu.SetActive(false);
-        credits.SetActive(true);
+        UIManager.S.SetVisibility(pauseMenu, UIManager.S.pauseMenuOpen);
+        UIManager.S.SetVisibility(credits, UIManager.S.creditsOpen);
 
         Time.timeScale = 0.0f;
     }

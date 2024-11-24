@@ -126,22 +126,16 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.W))
             { // move projectileAnchor up, within limit
-                print("Aiming up.");
                 if (projectileAnchor.transform.localPosition.z < anchorOriginalPosition.z + anchorVerticalRange)
                 {
                     projectileAnchor.transform.localPosition += new Vector3(0, 0, 0.0005f);
-                    print("Current position: " + projectileAnchor.transform.localPosition.z +
-                        "Upper range: " + (anchorOriginalPosition.z + anchorVerticalRange));
                 }
             }
             else if (Input.GetKey(KeyCode.S))
             { // move projectileAnchor down, within limit
-                print("Aiming down.");
                 if (projectileAnchor.transform.localPosition.z > anchorOriginalPosition.z - anchorVerticalRange)
                 {
                     projectileAnchor.transform.localPosition -= new Vector3(0, 0, 0.0005f);
-                    print("Current position: " + projectileAnchor.transform.localPosition.z +
-                        "Lower range: " + (anchorOriginalPosition.z - anchorVerticalRange));
                 }
             }
         }
@@ -150,5 +144,11 @@ public class PlayerController : MonoBehaviour
             projectileAnchor.StopAiming(); // hides laser sight
             projectileAnchor.transform.localPosition = anchorOriginalPosition; // puts gun back after player done aiming
         }
+    }
+
+    // used by SceneSwitcher/GameManager to get gun's data
+    public GameObject GetGun()
+    {
+        return gunGO;
     }
 }

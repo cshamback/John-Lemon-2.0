@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    public int health = 20;
+    public int numHits = 3;
     public Renderer targetRenderer;
 
     private float dmgEndTime = -1;
@@ -35,19 +35,18 @@ public class Target : MonoBehaviour
         }
     }
 
-    // make target take damage, destroy if no health left
+    // make target take damage, destroy if the minimum number of shots has hit
     public void GetShot(int damage)
     {
-        print("Target shot!");
-        health -= damage;
-        print("Shot. New health: " + health);
+        numHits--;
 
-        // make target red for feedback (temporary)
+        // make target red for feedback
         targetMat.color = damageColor;
         dmgEndTime = Time.time + 0.25f;
 
-        if (health <= 0)
+        if (numHits <= 0)
         {
+            GameManager.sGameManager.RemoveTarget(); // tell gameobject there is one less target
             gameObject.SetActive(false); // destroying causes issues. dont do that 
         }
     }

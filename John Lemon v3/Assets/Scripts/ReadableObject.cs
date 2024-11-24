@@ -9,7 +9,6 @@ public class ReadableObject : MonoBehaviour
 {
     // only one of these can be non-null
     // a readable object can have an image OR text, not both 
-
     public string text;
     public Image image;
 

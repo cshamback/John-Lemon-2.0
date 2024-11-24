@@ -33,9 +33,6 @@ public class Gun : MonoBehaviour
     {
         sight.SetActive(false);
         hud.SetActive(true);
-
-        currentLoadedText.text = "0";
-        totalAmmoText.text = "0";
     }
 
     // Update is called once per frame
@@ -49,7 +46,6 @@ public class Gun : MonoBehaviour
             if (totalAmmo <= maxAmmo) // if current total ammo is less than what can be loaded, load all of it
             {
                 // set amountLoaded to ammoCount, keep ammoCount the same
-                print("Loading all ammo: " + totalAmmo);
                 currentLoaded = totalAmmo;
                 currentLoadedText.text = totalAmmo.ToString();
             }
@@ -57,7 +53,6 @@ public class Gun : MonoBehaviour
             {
                 // load the max amount of ammo, keep ammoCount the same 
                 int diff = maxAmmo - currentLoaded;
-                print("Loading " + diff + " ammo to get a total of " + maxAmmo);
                 currentLoaded = maxAmmo;
                 currentLoadedText.text = currentLoaded.ToString();
             }
@@ -73,8 +68,6 @@ public class Gun : MonoBehaviour
     // called by Interactible with type Ammo 
     public void PickUpAmmo(int count)
     {
-        print("Picked up ammo.");
-
         totalAmmo += count;
         totalAmmoText.text = totalAmmo.ToString();
     }
@@ -120,7 +113,7 @@ public class Gun : MonoBehaviour
             {
                 if (currentLoaded > 0) // have to actually have ammo in order to shoot 
                 {
-                    print("Hit something!");
+                    //print("Hit something!");
                     switch (hit.transform.tag)
                     {
                         case "Target":
@@ -129,7 +122,6 @@ public class Gun : MonoBehaviour
                             Target target = hit.transform.gameObject.GetComponent<Target>();
                             if (target != null)
                             {
-                                print("Target found by Gun raycast.");
                                 target.GetShot(damage);
                             }
                             else
@@ -151,11 +143,6 @@ public class Gun : MonoBehaviour
                                 " Tag: " + hit.transform.gameObject.tag);
                             break;
                     }
-
-                    // decrease ammo by 1 
-                    currentLoaded -= 1;
-                    totalAmmo -= 1;
-                    UpdateAmmoHUD(totalAmmo, currentLoaded);
                 }
             }
         }

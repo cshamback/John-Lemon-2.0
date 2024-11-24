@@ -371,9 +371,10 @@
 "Assets/Scripts/Interactible.cs"
 "Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/PlayerController.cs"
-"Assets/Scripts/Projectile.cs"
 "Assets/Scripts/ReadableObject.cs"
+"Assets/Scripts/SceneSwitcher.cs"
 "Assets/Scripts/Target.cs"
+"Assets/Scripts/ToolTipManager.cs"
 "Assets/Scripts/UIManager.cs"
 -langversion:9.0
 /deterministic
