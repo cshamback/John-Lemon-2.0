@@ -143,11 +143,6 @@ public class Gun : MonoBehaviour
                                 " Tag: " + hit.transform.gameObject.tag);
                             break;
                     }
-
-                    // decrease ammo by 1 
-                    currentLoaded -= 1;
-                    totalAmmo -= 1;
-                    UpdateAmmoHUD(totalAmmo, currentLoaded);
                 }
             }
         }

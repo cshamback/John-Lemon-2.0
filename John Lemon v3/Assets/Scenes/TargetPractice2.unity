@@ -1256,12 +1256,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 438513314346149501, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 495838152573747588, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 526323139097871586, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695780714740156656, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: caa646e8f15c63840a1e2979461d66b3, type: 2}
+    - target: {fileID: 1695780714740156656, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6258452607876886693, guid: caa646e8f15c63840a1e2979461d66b3, type: 2}
+    - target: {fileID: 1695780714740156656, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2019704271341234121, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}

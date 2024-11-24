@@ -2,12 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEditor.Animations;
 using UnityEngine;
 
 // controls show/hide of all UI objects. 
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager S;
     public GameObject pauseMenu;
     public GameObject readableObject;
     public GameObject credits;
@@ -17,6 +20,21 @@ public class UIManager : MonoBehaviour
     private TextMeshProUGUI loadedAmmo;
 
     private Gun gun;
+
+    private bool readableObjectOpen = false;
+    public bool pauseMenuOpen = false;
+    public bool creditsOpen = false;
+    private bool hudOpen = true;
+
+    void Awake()
+    {
+        if (S != null && S != this)
+        {
+            Destroy(gameObject);
+        }
+        S = this;
+        DontDestroyOnLoad(this);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -41,19 +59,19 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            if (credits.activeInHierarchy)
+            if (creditsOpen)
             {
-                CloseOpenUI(credits);
+                CloseOpenUI(credits, creditsOpen);
             }
-            if (readableObject.activeInHierarchy)
+            if (readableObjectOpen)
             {
-                CloseOpenUI(readableObject);
+                CloseOpenUI(readableObject, readableObjectOpen);
             }
         }
 
         // readableObject UI is opened by another class (Interactible)
         // as such, UIManager must check if it is open and if so close HUD
-        if (readableObject.activeInHierarchy)
+        if (readableObjectOpen)
         {
             hud.SetActive(false);
             Time.timeScale = 0f;
@@ -61,14 +79,30 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void CloseOpenUI(GameObject ui)
+    public void CloseOpenUI(GameObject ui, bool isOpen)
     {
         Time.timeScale = 1.0f;
 
         PauseMenu.isPaused = false;
         PauseMenu.allowedToPause = false;
 
-        ui.SetActive(false);
-        hud.SetActive(true);
+        SetVisibility(ui, isOpen);
+        SetVisibility(hud, hudOpen);
+    }
+
+    public void SetVisibility(GameObject ui, bool isOpen)
+    {
+
+        // if currently "open", close it by setting alpha to 0 
+        if (isOpen)
+        {
+            ui.GetComponent<CanvasGroup>().alpha = 0;
+        }
+        else
+        { // if currently closed, "open" it by setting alpha to 0.5
+            ui.GetComponent<CanvasGroup>().alpha = 0.5f;
+        }
+
+        isOpen = !isOpen;
     }
 }

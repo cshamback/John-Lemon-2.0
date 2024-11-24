@@ -24,14 +24,11 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        if (sGameManager)
+        if (sGameManager != null && sGameManager != this)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
-        else
-        {
-            sGameManager = this;
-        }
+        sGameManager = this;
         DontDestroyOnLoad(this); // allows GameManager singleton's data to be saved between scenes
 
         // subscribe to sceneLoaded event for load order purposes
@@ -63,9 +60,7 @@ public class GameManager : MonoBehaviour
 
                 gun.totalAmmo = 1000;
                 gun.currentLoaded = 0; // we want to explicitly force the player to reload
-
-                // this is used to turn off the tutorial trigger later! 
-                tutorialComplete = true;
+                gun.UpdateAmmoHUD(gun.totalAmmo, gun.currentLoaded);
 
                 john.transform.position = new Vector3(0, 0, 0);
             }
@@ -80,11 +75,20 @@ public class GameManager : MonoBehaviour
         // also restore his ammo from that point 
         if (tutorialComplete && scene.name != "TargetPractice2")
         {
+            GameObject switcher = GameObject.Find("TutorialCollider");
+            switcher.SetActive(false);
+
             gun.totalAmmo = savedTotalAmmo;
             gun.currentLoaded = savedLoadedAmmo;
 
             john.transform.position = savedPosition;
+            print("Set John's position to: " + savedPosition + " = " + john.transform.position);
+
+            gun.UpdateAmmoHUD(gun.totalAmmo, gun.currentLoaded);
         }
+
+        // has to be called here because TTM doesn't know when the scene changes
+        ToolTipManager.S.FindToolTips();
     }
 
     // Update is called once per frame

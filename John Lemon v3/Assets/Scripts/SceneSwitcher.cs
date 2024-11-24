@@ -21,14 +21,22 @@ public class SceneSwitcher : MonoBehaviour
     public string currentScene;
 
     [Header("Tutorial Scene Data")]
-    public int numTargets; // current number of active targets
+    public int numTargets = -1; // current number of active targets
+
+    void Start()
+    {
+        print("Number of targets in scene: " + numTargets);
+    }
 
     // Update is called once per frame
     void Update()
     {
         // if in the tutorial and john has shot all the targets, return!
-        if (currentScene == "TargetPractice2" && numTargets <= 0)
+        if (/*currentScene == "TargetPractice2" && */ numTargets == 0)
         {
+            //print("Calling changescenes(null, false). Switching to scene + " + newScene);
+            GameManager.sGameManager.tutorialComplete = true;
+            print("Setting tutorialComplete to true. TutorialComplete: " + GameManager.sGameManager.tutorialComplete);
             ChangeScenes(null, false); // don't need to pass in a John GO because we're not saving his data
         }
 
@@ -42,7 +50,7 @@ public class SceneSwitcher : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !GameManager.sGameManager.tutorialComplete)
         {
             print("Player hit collider!!");
             ChangeScenes(other.gameObject, true);
@@ -57,18 +65,18 @@ public class SceneSwitcher : MonoBehaviour
         // ProjectileAnchor is a grandchild of John.
         if (saveData)
         {
-            print("Saving data from SceneSwitcher for scene: " + currentScene);
+            //print("Saving data from SceneSwitcher for scene: " + currentScene);
             GameManager.sGameManager.savedLoadedAmmo = john.GetComponentInChildren<Gun>().currentLoaded;
             GameManager.sGameManager.savedTotalAmmo = john.GetComponentInChildren<Gun>().totalAmmo;
             GameManager.sGameManager.savedPosition = john.transform.localPosition;
 
-            print("Saved position: " + GameManager.sGameManager.savedPosition);
+            //print("Saved position: " + GameManager.sGameManager.savedPosition);
         }
 
         // ---- CHANGE SCENES ----
         if (newScene != "" && newScene != null)
         {
-            print("Changing scenes from: " + SceneManager.GetActiveScene().name + " to " + newScene);
+            //print("Changing scenes from: " + SceneManager.GetActiveScene().name + " to " + newScene);
             SceneManager.LoadScene(newScene);
         }
         else
