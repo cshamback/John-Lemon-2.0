@@ -28,6 +28,8 @@ public class Gun : MonoBehaviour
 
     public int maxAmmo;
 
+    public ParticleSystem muzzleFlash;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -92,6 +94,8 @@ public class Gun : MonoBehaviour
         // decrease ammo by 1 
         if (currentLoaded > 0 && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
         {
+            muzzleFlash.Play();
+
             currentLoaded -= 1;
             totalAmmo -= 1;
             UpdateAmmoHUD(totalAmmo, currentLoaded);
