@@ -365,6 +365,7 @@
 "Assets/Scripts/CombinationLock.cs"
 "Assets/Scripts/CombinationWheel.cs"
 "Assets/Scripts/Crawler.cs"
+"Assets/Scripts/Door.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/GuardLock.cs"
 "Assets/Scripts/Gun.cs"
