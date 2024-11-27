@@ -39,10 +39,6 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pauseMenu.SetActive(false);
-        readableObject.SetActive(false);
-        credits.SetActive(false);
-
         hud.SetActive(true); // HUD is active while playing
 
         // find these programmatically to cut down on number of annoying ass drag and drops
@@ -81,6 +77,7 @@ public class UIManager : MonoBehaviour
 
     public void CloseOpenUI(GameObject ui, bool isOpen)
     {
+        print("Closing open ui: " + ui.name);
         Time.timeScale = 1.0f;
 
         PauseMenu.isPaused = false;
@@ -96,13 +93,16 @@ public class UIManager : MonoBehaviour
         // if currently "open", close it by setting alpha to 0 
         if (isOpen)
         {
+            print("IsOpen for " + ui.name + ": " + isOpen + " setting alpha to 0.");
             ui.GetComponent<CanvasGroup>().alpha = 0;
         }
         else
         { // if currently closed, "open" it by setting alpha to 0.5
+            print("IsOpen for " + ui.name + ": " + isOpen + " setting alpha to 0.5.");
             ui.GetComponent<CanvasGroup>().alpha = 0.5f;
         }
 
         isOpen = !isOpen;
+        print("isOpen is now: " + isOpen);
     }
 }

@@ -84,7 +84,17 @@ public class Interactible : MonoBehaviour
                         Destroy(gameObject);
                         break;
                     case eObjectType.weapon:
-                        print("Weapon selected.");
+                        print("Weapon picked up: " + gameObject.name);
+                        Gun weapon = gameObject.GetComponent<Gun>();
+
+                        if (weapon == null)
+                        {
+                            Debug.LogError("Gameobject " + gameObject.name + " does not have a Gun component.");
+                        }
+                        else
+                        {
+                            gun.SetStats();
+                        }
 
                         // weapon cannot be picked up again
                         Destroy(gameObject);
