@@ -366,6 +366,7 @@
 "Assets/Scripts/CombinationWheel.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/GuardLock.cs"
+"Assets/Scripts/KeyBehavior.cs"
 "Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/ReadableObject.cs"
 "Assets/Scripts/UIManager.cs"
