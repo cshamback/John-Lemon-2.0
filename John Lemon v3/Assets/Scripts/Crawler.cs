@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -18,10 +19,10 @@ public class Crawler : MonoBehaviour
     //Varaibles
     [SerializeField] Vector3 jumpVector = new Vector3(0, 1, 1); //The vector that will be used to apply a force to the rigidbody.
     float disToGround;
+    public bool inRange = false;
 
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
@@ -31,6 +32,18 @@ public class Crawler : MonoBehaviour
 
         disToGround = collide.bounds.extents.y;
 
+        agent.isStopped = true;
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+    }
+
+    public void Activate()
+    {
+        Jump();
+        Invoke("KeepWalking", 0.8f);
     }
 
     // Update is called once per frame
@@ -70,7 +83,6 @@ private void IsGrounded() //This is to check if the enemy has hit the ground yet
         grounded = Physics.Raycast(transform.position, -Vector3.up, disToGround + 0.1f);
         if(grounded)
         {
-            grounded = true;
             rb.velocity = Vector3.zero; //Resets the velocity of the rigidbody so it stops sliding.
             rb.constraints = RigidbodyConstraints.FreezeAll; //Freezes the y position of the rigidbody.
         }

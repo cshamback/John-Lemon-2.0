@@ -363,6 +363,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Input system/PlayerController.cs"
 "Assets/Scripts/Crawler.cs"
+"Assets/Scripts/EnemyTrigger.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Observer.cs"
 "Assets/Scripts/PauseMenu.cs"
