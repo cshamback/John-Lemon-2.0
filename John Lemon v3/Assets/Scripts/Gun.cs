@@ -79,6 +79,12 @@ public class Gun : MonoBehaviour
         sight.SetActive(false);
     }
 
+    public void SetStats()
+    {
+        print("Changing stats of John's equipped weapon.");
+        print("Setting weapon prefab of John's equipped weapon.");
+    }
+
     // called by PlayerController on John 
     public void Aim()
     {

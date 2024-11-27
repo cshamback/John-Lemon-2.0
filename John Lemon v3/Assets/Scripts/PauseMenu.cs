@@ -23,13 +23,15 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
+            Debug.Log("Escape key released.");
             if (isPaused)
             { // resume
+                Debug.Log("Calling resume.");
                 Resume();
             }
             else if (allowedToPause) // only pause if not closing something else
             { // pause
-                pauseMenu.SetActive(true);
+                UIManager.S.SetVisibility(pauseMenu, UIManager.S.pauseMenuOpen);
                 Time.timeScale = 0.0f;
 
                 isPaused = true;
@@ -47,7 +49,7 @@ public class PauseMenu : MonoBehaviour
 
     public void RestartLevel()
     {
-        print("Restart level.");
+        Debug.Log("Restart level.");
 
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("SampleScene");
@@ -58,7 +60,7 @@ public class PauseMenu : MonoBehaviour
     // TODO: implement start menu <3
     public void QuitToStart()
     {
-        print("Quit to start.");
+        Debug.Log("Quit to start.");
 
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("SampleScene");
@@ -68,20 +70,24 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        print("Resumed, motherfucker");
-        UIManager.S.SetVisibility(pauseMenu, UIManager.S.pauseMenuOpen);
+        Debug.Log("Resumed, motherfucker");
+        UIManager.S.SetVisibility(pauseMenu, isPaused);
         Time.timeScale = 1.0f;
 
         isPaused = false;
+        UIManager.S.pauseMenuOpen = false;
+        Debug.Log("Changed pauseMenuOpen to " + UIManager.S.pauseMenuOpen + " and isPaused to: " + isPaused);
     }
 
     public void Credits()
     {
-        print("Show credits.");
+        Debug.Log("Show credits.");
 
-        UIManager.S.SetVisibility(pauseMenu, UIManager.S.pauseMenuOpen);
+        UIManager.S.SetVisibility(pauseMenu, isPaused);
         UIManager.S.SetVisibility(credits, UIManager.S.creditsOpen);
 
         Time.timeScale = 0.0f;
+        isPaused = false;
+        Debug.Log("Changed pauseMenuOpen to " + UIManager.S.pauseMenuOpen + " and isPaused to: " + isPaused);
     }
 }

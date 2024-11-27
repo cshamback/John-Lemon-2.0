@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
 
     // maps string (gameobject name of door) to bool (whether john has that key or not)
     public Dictionary<string, bool> keyDict = new Dictionary<string, bool>{
-        {"Doorname 1", false},
-        {"Doorname 2", false}
+        {"Door_V1 (1)", false}, // office key
+        {"DoorD_V1 (1)", false} // morgue key
     };
 
     [SerializeField]
