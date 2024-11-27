@@ -14,9 +14,9 @@ public class Interactible : MonoBehaviour
     public cakeslice.Outline outline; // used to turn outline on and off
     public eObjectType type;
     public TextMeshProUGUI tooltipText;
+    public GameObject john; // used to get john's position and decide if close enough
 
     [Header("Ammo and Weapons Only: ")]
-    public GameObject john; // used to get john's position and decide if close enough
     [SerializeField]
     private Gun gun;
     public int ammoAmount;
@@ -38,7 +38,13 @@ public class Interactible : MonoBehaviour
     {
         tooltipText.enabled = false;
 
+        john = GameObject.FindGameObjectWithTag("Player");
         gun = john.GetComponentInChildren<Gun>(); // one of john's children has the gun gameobject 
+
+        if (door != null)
+        {
+            doorScript = door.GetComponent<Door>();
+        }
     }
 
     // Update is called once per frame
@@ -46,9 +52,8 @@ public class Interactible : MonoBehaviour
     {
         // distance between this object and john is < 1m
         float distance = Vector3.Distance(john.transform.position, gameObject.transform.position);
-        if (distance < 1)
+        if (distance < 2)
         {
-
             // enable outline 
             outline.enabled = true;
 
@@ -86,6 +91,7 @@ public class Interactible : MonoBehaviour
 
                         // ammo cannot be picked up again 
                         Destroy(gameObject);
+                        tooltipText.enabled = false;
                         break;
                     case eObjectType.weapon:
                         print("Weapon picked up: " + gameObject.name);
@@ -102,18 +108,20 @@ public class Interactible : MonoBehaviour
 
                         // weapon cannot be picked up again
                         Destroy(gameObject);
+                        tooltipText.enabled = false;
                         break;
                     case eObjectType.door:
                         print("Door interacted with!");
                         foreach (KeyValuePair<string, bool> pair in GameManager.sGameManager.keyDict)
                         {
-                            print("Current key value pair: \nKey: " + pair.Key + "\nValue: " + pair.Value);
+                            print("Current key value pair - Key: " + pair.Key + "Value: " + pair.Value);
                             if (pair.Key == door.name)
                             {
                                 if (pair.Value == true)
                                 {
                                     print("John has key for door " + door.name);
                                     doorScript.OpenDoor(); // for now, just sets gameobject.SetActive(false)
+                                    tooltipText.enabled = false;
                                     break;
                                 }
                                 else
@@ -122,21 +130,23 @@ public class Interactible : MonoBehaviour
                                 }
                             }
                         }
-                        Debug.LogError("Could not find door named " + door.name + " in keyDict.");
                         break;
                     case eObjectType.key:
-                        print("Key interacted with!");
+                        Debug.Log("Key to door " + doorName + " picked up.");
                         foreach (KeyValuePair<string, bool> pair in GameManager.sGameManager.keyDict)
                         {
-                            print("Current key value pair: \nKey: " + pair.Key + "\nValue: " + pair.Value);
+                            Debug.Log("Current key value pair - Key: " + pair.Key + " Value: " + pair.Value);
+                            Debug.Log("doorName: " + doorName + " pair.Key: " + pair.Key);
                             if (pair.Key == doorName)
                             {
-                                print("Found key-value pair. Updating keyDict.");
                                 GameManager.sGameManager.keyDict[pair.Key] = true;
+                                Debug.Log("Found key-value pair. Updating keyDict. New key: " + pair.Key + " Value: " + GameManager.sGameManager.keyDict[pair.Key]);
                                 break;
                             }
                         }
-                        Debug.LogError("Did not find key for door " + doorName);
+                        Debug.Log("KeyDict for loop finished.");
+                        Destroy(gameObject); // cannot pick up key multiple times
+                        tooltipText.enabled = false;
                         break;
                     default:
                         Debug.LogError("Type does not exist: " + type);
