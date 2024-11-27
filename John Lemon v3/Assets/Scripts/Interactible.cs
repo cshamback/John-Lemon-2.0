@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 using UnityEngine.UI;
 using TMPro;
 
-public enum eObjectType { readableObject, ammo, weapon, door }
+public enum eObjectType { readableObject, ammo, weapon, door, key }
 
 public class Interactible : MonoBehaviour
 {
@@ -28,6 +28,10 @@ public class Interactible : MonoBehaviour
 
     [Header("Doors only: ")]
     public GameObject door;
+    public Door doorScript;
+
+    [Header("Keys Only: ")]
+    public string doorName;
 
     // Start is called before the first frame update
     void Start()
@@ -98,6 +102,41 @@ public class Interactible : MonoBehaviour
 
                         // weapon cannot be picked up again
                         Destroy(gameObject);
+                        break;
+                    case eObjectType.door:
+                        print("Door interacted with!");
+                        foreach (KeyValuePair<string, bool> pair in GameManager.sGameManager.keyDict)
+                        {
+                            print("Current key value pair: \nKey: " + pair.Key + "\nValue: " + pair.Value);
+                            if (pair.Key == door.name)
+                            {
+                                if (pair.Value == true)
+                                {
+                                    print("John has key for door " + door.name);
+                                    doorScript.OpenDoor(); // for now, just sets gameobject.SetActive(false)
+                                    break;
+                                }
+                                else
+                                {
+                                    print("John does NOT have the key for this door.");
+                                }
+                            }
+                        }
+                        Debug.LogError("Could not find door named " + door.name + " in keyDict.");
+                        break;
+                    case eObjectType.key:
+                        print("Key interacted with!");
+                        foreach (KeyValuePair<string, bool> pair in GameManager.sGameManager.keyDict)
+                        {
+                            print("Current key value pair: \nKey: " + pair.Key + "\nValue: " + pair.Value);
+                            if (pair.Key == doorName)
+                            {
+                                print("Found key-value pair. Updating keyDict.");
+                                GameManager.sGameManager.keyDict[pair.Key] = true;
+                                break;
+                            }
+                        }
+                        Debug.LogError("Did not find key for door " + doorName);
                         break;
                     default:
                         Debug.LogError("Type does not exist: " + type);

@@ -9,6 +9,12 @@ public class GameManager : MonoBehaviour
     public static GameManager sGameManager; // singleton - one GM to control entire game
     public bool tutorialComplete = false;
 
+    // maps string (gameobject name of door) to bool (whether john has that key or not)
+    public Dictionary<string, bool> keyDict = new Dictionary<string, bool>{
+        {"Doorname 1", false},
+        {"Doorname 2", false}
+    };
+
     [SerializeField]
     private GameObject john;
     [SerializeField]
