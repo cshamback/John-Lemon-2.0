@@ -367,6 +367,7 @@
 "Assets/Scripts/Observer.cs"
 "Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/ReadableObject.cs"
+"Assets/Scripts/Test.cs"
 "Assets/Scripts/UIManager.cs"
 -langversion:9.0
 /deterministic
