@@ -94,7 +94,7 @@ public class Crawler : MonoBehaviour
             {
                 rb.velocity = Vector3.zero; //Resets the velocity of the rigidbody so it stops sliding.
                 rb.constraints = RigidbodyConstraints.FreezeAll; //Freezes the y position of the rigidbody.
-                Invoke("dealDamage", 0.25f); //Gives the animation time to get to the contact part.
+                Invoke("dealDamage", 0.5f); //Gives the animation time to get to the contact part.
             }
         }
     }
@@ -115,9 +115,11 @@ public class Crawler : MonoBehaviour
 
     public void dealDamage()
     {
-        canHurt = Physics.Raycast(transform.position, Vector3.forward, out hitInfo, damageBaseDistance + damageBonusDistance);
+        canHurt = Physics.Raycast(transform.position,  transform.TransformDirection(Vector3.forward), out hitInfo, damageBaseDistance + damageBonusDistance);
+        Debug.DrawRay (transform.position,  transform.TransformDirection(Vector3.forward) * (damageBaseDistance + damageBonusDistance), Color.red);
         if(canHurt && hitInfo.transform == target.transform)
         {
+            Debug.Log("take that");
             //Put a call to the deal damage script on the player side here, for say 15 damage.
             Invoke("dealDamage", 0.833f); //Recursievly call the function to check and deal
         }
