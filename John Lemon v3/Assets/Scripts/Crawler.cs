@@ -10,17 +10,22 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Rigidbody))] //Requires there to be a rigidbody component.
 public class Crawler : MonoBehaviour
 {
-    [SerializeField] private Transform target; //What the agent will move towards.
-    //Components
+    [SerializeField] private GameObject target; //What the agent will move towards.
+    //Components / objects
     private NavMeshAgent agent;
     private Animator animator;
     private Rigidbody rb;
     private Collider collide;
+    private Material enemyMap;
+    public ParticleSystem bloodSplat;
     //Varaibles
     [SerializeField] Vector3 jumpVector = new Vector3(0, 1, 1); //The vector that will be used to apply a force to the rigidbody.
+    public int health = 100;
     float disToGround;
-    public bool inRange = false;
-
+    bool canHurt = false;
+    float damageBaseDistance;
+    [SerializeField] float damageBonusDistance = 0.1f;
+    RaycastHit hitInfo;
 
     void Awake()
     {
@@ -28,9 +33,11 @@ public class Crawler : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
         collide = GetComponent<Collider>();
+        enemyMap = GetComponentInChildren<Renderer>().material;
 
 
         disToGround = collide.bounds.extents.y;
+        damageBaseDistance = collide.bounds.extents.z;
 
         agent.isStopped = true;
     }
@@ -51,7 +58,7 @@ public class Crawler : MonoBehaviour
     {
         if(agent.isStopped == false)
         {
-            agent.destination = target.position;
+            agent.destination = target.transform.position;
         }
     }
 
@@ -63,11 +70,13 @@ public class Crawler : MonoBehaviour
         Vector3 force = transform.forward * jumpVector.z + transform.up * jumpVector.y;
         rb.AddForce(force, ForceMode.Impulse); // Applies an impulse force in the forward direction.
         Invoke("IsGrounded", 0.75f);
+
     }
 
     //Makes the crawler start crawling again.
     public void KeepWalking()
     {
+        canHurt = false;
         animator.SetTrigger("WalkTrigger");
         rb.isKinematic = true;
         rb.isKinematic = false; //Resets the velocity of the rigidbody so it stops sliding.
@@ -75,18 +84,43 @@ public class Crawler : MonoBehaviour
         agent.isStopped = false; //Resumes the agent's movement. 
     }
     
-private void IsGrounded() //This is to check if the enemy has hit the ground yet.
-{
-    bool grounded = false;
-    while(!grounded)
+    private void IsGrounded() //This is to check if the enemy has hit the ground yet.
     {
-        grounded = Physics.Raycast(transform.position, -Vector3.up, disToGround + 0.1f);
-        if(grounded)
+        bool grounded = false;
+        while(!grounded)
         {
-            rb.velocity = Vector3.zero; //Resets the velocity of the rigidbody so it stops sliding.
-            rb.constraints = RigidbodyConstraints.FreezeAll; //Freezes the y position of the rigidbody.
+            grounded = Physics.Raycast(transform.position, -Vector3.up, disToGround + 0.1f);
+            if(grounded)
+            {
+                rb.velocity = Vector3.zero; //Resets the velocity of the rigidbody so it stops sliding.
+                rb.constraints = RigidbodyConstraints.FreezeAll; //Freezes the y position of the rigidbody.
+                Invoke("dealDamage", 0.25f); //Gives the animation time to get to the contact part.
+            }
         }
     }
 
-}
+    public void takeDamage(int damage)
+    {
+        health -= damage;
+        bloodSplat.Play();
+        if(health <= 0)
+        {
+            agent.isStopped = true;
+            bloodSplat.Play();
+            bloodSplat.Play();
+            animator.SetTrigger("DeathTrigger");
+            Destroy(gameObject, 0.25f);
+        }
+    }
+
+    public void dealDamage()
+    {
+        canHurt = Physics.Raycast(transform.position, Vector3.forward, out hitInfo, damageBaseDistance + damageBonusDistance);
+        if(canHurt && hitInfo.transform == target.transform)
+        {
+            //Put a call to the deal damage script on the player side here, for say 15 damage.
+            Invoke("dealDamage", 0.833f); //Recursievly call the function to check and deal
+        }
+    }
+
 }
