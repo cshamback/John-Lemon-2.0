@@ -76,7 +76,7 @@ public class SceneSwitcher : MonoBehaviour
         // ---- CHANGE SCENES ----
         if (newScene != "" && newScene != null)
         {
-            //print("Changing scenes from: " + SceneManager.GetActiveScene().name + " to " + newScene);
+            Debug.Log("Changing scenes from: " + SceneManager.GetActiveScene().name + " to " + newScene);
             SceneManager.LoadScene(newScene);
         }
         else
