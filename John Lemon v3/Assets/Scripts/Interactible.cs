@@ -58,8 +58,20 @@ public class Interactible : MonoBehaviour
             outline.enabled = true;
 
             // deal with tooltip: set position and enable 
-            // set to the position of this gameobject in world space - move up 0.5m 
-            tooltipText.transform.position = Camera.main.WorldToScreenPoint(transform.position + (Vector3.up / 2));
+            if (type == eObjectType.key)
+            {
+                // bottom center of screen 
+                // yeah yeah, hard coding bad
+                // sue me 
+                // or better yet, get the Camera.ScreenHeight or whatever and fix it 
+                // 1080x1920 is goated tho so if you change the screen resolution and it fucks up that's on you 
+                tooltipText.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(960, 200, 0));
+            }
+            else
+            {
+                // set to the position of this gameobject in world space - move up 0.5m 
+                tooltipText.transform.position = Camera.main.WorldToScreenPoint(transform.position + (Vector3.up / 2));
+            }
             tooltipText.enabled = true;
 
             // if E is pressed while in range, handle interaction
