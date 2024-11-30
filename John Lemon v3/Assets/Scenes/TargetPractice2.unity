@@ -1227,7 +1227,9 @@ PrefabInstance:
       propertyPath: m_TagString
       value: EquippedGun
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7901620382956989203, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+    - {fileID: 4861530506746427510, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
