@@ -46,25 +46,26 @@ public class Gun : MonoBehaviour
         // reloading does not change the total count of ammo, only moves stuff around 
         if (Input.GetKeyDown(KeyCode.R))
         {
+            Debug.Log("R has been pressed.");
             // do math: 
             if (totalAmmo <= maxAmmo) // if current total ammo is less than what can be loaded, load all of it
             {
                 // set amountLoaded to ammoCount, keep ammoCount the same
                 currentLoaded = totalAmmo;
-                currentLoadedText.text = totalAmmo.ToString();
             }
             else // more ammo than can be loaded at one time: 
             {
                 // load the max amount of ammo, keep ammoCount the same 
-                int diff = maxAmmo - currentLoaded;
                 currentLoaded = maxAmmo;
-                currentLoadedText.text = currentLoaded.ToString();
             }
+
+            UpdateAmmoHUD(totalAmmo, currentLoaded);
         }
     }
 
     public void UpdateAmmoHUD(int total, int loaded)
     {
+        Debug.Log("Updating HUD: total: " + total.ToString() + " current: " + loaded.ToString());
         totalAmmoText.text = total.ToString();
         currentLoadedText.text = loaded.ToString();
     }
