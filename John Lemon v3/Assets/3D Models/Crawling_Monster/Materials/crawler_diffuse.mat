@@ -21,7 +21,11 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+<<<<<<< Updated upstream
   m_LockedProperties: 
+=======
+  m_LockedProperties: _Mode
+>>>>>>> Stashed changes
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:

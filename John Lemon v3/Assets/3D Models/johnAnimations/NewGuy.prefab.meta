@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: d9bcd49b2630bfe46953654c1753d025
+=======
+<<<<<<<< HEAD:John Lemon v3/Assets/3D Models/johnAnimations/NewGuy.prefab.meta
+guid: d9bcd49b2630bfe46953654c1753d025
+========
+guid: 9d011edd2ae20b84895eb84a601307f2
+>>>>>>>> CrawlerEnemy:John Lemon v3/Assets/3D Models/NewGuy (1).prefab.meta
+>>>>>>> Stashed changes
 PrefabImporter:
   externalObjects: {}
   userData: 
