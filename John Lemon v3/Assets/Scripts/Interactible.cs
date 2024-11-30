@@ -20,6 +20,9 @@ public class Interactible : MonoBehaviour
     [SerializeField]
     private Gun gun;
     public int ammoAmount;
+    public int damageAmount;
+    public int range;
+    public MeshRenderer gunMesh;
 
     [Header("Readable Objects Only: ")]
     public Sprite readableImage; // the image to use
@@ -50,15 +53,17 @@ public class Interactible : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // distance between this object and john is < 1m
+        // distance between this object and john is < 2m
         float distance = Vector3.Distance(john.transform.position, gameObject.transform.position);
-        if (distance < 2)
+
+        if (distance < 2.5)
         {
+            Debug.Log("John is in range.");
             // enable outline 
             outline.enabled = true;
 
             // deal with tooltip: set position and enable 
-            if (type == eObjectType.key)
+            if (type == eObjectType.key || type == eObjectType.weapon)
             {
                 // bottom center of screen 
                 // yeah yeah, hard coding bad
@@ -107,20 +112,12 @@ public class Interactible : MonoBehaviour
                         break;
                     case eObjectType.weapon:
                         print("Weapon picked up: " + gameObject.name);
-                        Gun weapon = gameObject.GetComponent<Gun>();
-
-                        if (weapon == null)
-                        {
-                            Debug.LogError("Gameobject " + gameObject.name + " does not have a Gun component.");
-                        }
-                        else
-                        {
-                            gun.SetStats();
-                        }
+                        gun.SetProperties(damageAmount, range, gunMesh);
 
                         // weapon cannot be picked up again
                         Destroy(gameObject);
                         tooltipText.enabled = false;
+
                         break;
                     case eObjectType.door:
                         print("Door interacted with!");

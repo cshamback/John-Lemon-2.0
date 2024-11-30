@@ -30,6 +30,8 @@ public class Gun : MonoBehaviour
 
     public ParticleSystem muzzleFlash;
 
+    public MeshRenderer mesh;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,10 +81,15 @@ public class Gun : MonoBehaviour
         sight.SetActive(false);
     }
 
-    public void SetStats()
+    public void SetProperties(int dmg, int rng, MeshRenderer msh)
     {
         print("Changing stats of John's equipped weapon.");
-        print("Setting weapon prefab of John's equipped weapon.");
+        damage = dmg;
+        range = rng;
+
+        // todo: change to animation? 
+        print("Setting weapon model of John's equipped weapon.");
+        mesh = msh;
     }
 
     // called by PlayerController on John 
