@@ -1,15 +1,3 @@
-<<<<<<< Updated upstream
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Crawler : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-=======
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -63,17 +51,13 @@ public class Crawler : MonoBehaviour
     {
         Jump();
         Invoke("KeepWalking", 0.8f);
->>>>>>> Stashed changes
     }
 
     // Update is called once per frame
     void Update()
     {
-<<<<<<< Updated upstream
-        
-    }
-=======
-        if(agent.isStopped == false)
+
+        if (agent.isStopped == false)
         {
             agent.destination = target.transform.position;
         }
@@ -100,14 +84,14 @@ public class Crawler : MonoBehaviour
         rb.constraints = RigidbodyConstraints.None; //Freezes the y position of the rigidbody.
         agent.isStopped = false; //Resumes the agent's movement. 
     }
-    
+
     private void IsGrounded() //This is to check if the enemy has hit the ground yet.
     {
         bool grounded = false;
-        while(!grounded)
+        while (!grounded)
         {
             grounded = Physics.Raycast(transform.position, -Vector3.up, disToGround + 0.1f);
-            if(grounded)
+            if (grounded)
             {
                 rb.velocity = Vector3.zero; //Resets the velocity of the rigidbody so it stops sliding.
                 rb.constraints = RigidbodyConstraints.FreezeAll; //Freezes the y position of the rigidbody.
@@ -120,7 +104,7 @@ public class Crawler : MonoBehaviour
     {
         health -= damage;
         bloodSplat.Play();
-        if(health <= 0)
+        if (health <= 0)
         {
             agent.isStopped = true;
             bloodSplat.Play();
@@ -132,15 +116,13 @@ public class Crawler : MonoBehaviour
 
     public void dealDamage()
     {
-        canHurt = Physics.Raycast(transform.position,  transform.TransformDirection(Vector3.forward), out hitInfo, damageBaseDistance + damageBonusDistance);
-        Debug.DrawRay (transform.position,  transform.TransformDirection(Vector3.forward) * (damageBaseDistance + damageBonusDistance), Color.red);
-        if(canHurt && hitInfo.transform == target.transform)
+        canHurt = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hitInfo, damageBaseDistance + damageBonusDistance);
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * (damageBaseDistance + damageBonusDistance), Color.red);
+        if (canHurt && hitInfo.transform == target.transform)
         {
             Debug.Log("take that");
             //Put a call to the deal damage script on the player side here, for say 15 damage.
             Invoke("dealDamage", 0.833f); //Recursievly call the function to check and deal
         }
     }
-
->>>>>>> Stashed changes
 }

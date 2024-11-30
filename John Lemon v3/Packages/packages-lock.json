@@ -6,8 +6,6 @@
       "source": "builtin",
       "dependencies": {}
     },
-<<<<<<< Updated upstream
-=======
     "com.unity.ai.navigation": {
       "version": "1.1.5",
       "depth": 0,
@@ -17,7 +15,6 @@
       },
       "url": "https://packages.unity.com"
     },
->>>>>>> Stashed changes
     "com.unity.collab-proxy": {
       "version": "2.5.1",
       "depth": 0,
