@@ -5863,15 +5863,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.7
+      value: 3.92
       objectReference: {fileID: 0}
     - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.2630553
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.02
+      value: -19.5
       objectReference: {fileID: 0}
     - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5918,9 +5918,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 494237922}
     - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: range
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
       propertyPath: sight
       value: 
       objectReference: {fileID: 996780293}
+    - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: damage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
       propertyPath: maxAmmo
       value: 30
@@ -5937,6 +5945,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: EquippedGun
       objectReference: {fileID: 0}
+    - target: {fileID: 4861530506746427510, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5d284e30671c98747b7adddadbe815cd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20154,6 +20166,8 @@ MonoBehaviour:
   sceneSwitcher: {fileID: 0}
   savedLoadedAmmo: 0
   savedTotalAmmo: 0
+  savedDamage: 0
+  savedRange: 0
   savedPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &1586101465
 Transform:

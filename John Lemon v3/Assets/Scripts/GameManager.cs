@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     [Header("Saved Data")]
     public int savedLoadedAmmo;
     public int savedTotalAmmo;
+    public int savedDamage;
+    public int savedRange;
     public Vector3 savedPosition;
 
     void Awake()
@@ -66,6 +68,8 @@ public class GameManager : MonoBehaviour
 
                 gun.totalAmmo = 1000;
                 gun.currentLoaded = 0; // we want to explicitly force the player to reload
+                gun.damage = 1;
+                gun.range = 100;
                 gun.UpdateAmmoHUD(gun.totalAmmo, gun.currentLoaded);
 
                 john.transform.position = new Vector3(0, 0, 0);
@@ -82,14 +86,20 @@ public class GameManager : MonoBehaviour
         if (tutorialComplete && scene.name != "TargetPractice2")
         {
             GameObject switcher = GameObject.Find("TutorialCollider");
+
+            // don't let player go back to tutorial 
             switcher.SetActive(false);
 
+            // load in saved data
             gun.totalAmmo = savedTotalAmmo;
             gun.currentLoaded = savedLoadedAmmo;
+            gun.damage = savedDamage;
+            gun.range = savedRange;
 
             john.transform.position = savedPosition;
             print("Set John's position to: " + savedPosition + " = " + john.transform.position);
 
+            // update all UI with loaded data 
             gun.UpdateAmmoHUD(gun.totalAmmo, gun.currentLoaded);
         }
 

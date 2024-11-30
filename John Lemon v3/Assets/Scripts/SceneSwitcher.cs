@@ -66,9 +66,12 @@ public class SceneSwitcher : MonoBehaviour
         if (saveData)
         {
             //print("Saving data from SceneSwitcher for scene: " + currentScene);
-            GameManager.sGameManager.savedLoadedAmmo = john.GetComponentInChildren<Gun>().currentLoaded;
-            GameManager.sGameManager.savedTotalAmmo = john.GetComponentInChildren<Gun>().totalAmmo;
+            Gun gun = john.GetComponentInChildren<Gun>();
+            GameManager.sGameManager.savedLoadedAmmo = gun.currentLoaded;
+            GameManager.sGameManager.savedTotalAmmo = gun.totalAmmo;
             GameManager.sGameManager.savedPosition = john.transform.localPosition;
+            GameManager.sGameManager.savedDamage = gun.damage;
+            GameManager.sGameManager.savedRange = gun.range;
 
             //print("Saved position: " + GameManager.sGameManager.savedPosition);
         }

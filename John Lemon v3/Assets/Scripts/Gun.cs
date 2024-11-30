@@ -13,7 +13,7 @@ using Unity.VisualScripting;
 public class Gun : MonoBehaviour
 {
     public int damage = 10;
-    public float range = 100f; // how far player can shoot
+    public int range = 100; // how far player can shoot
     public int totalAmmo = 0;
     public int currentLoaded = 0;
 
@@ -105,7 +105,7 @@ public class Gun : MonoBehaviour
 
         // even if not hitting anything, still decrease ammo if fire button pushed
         // decrease ammo by 1 
-        if (currentLoaded > 0 && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
+        if (currentLoaded > 0 && damage > 0 && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
         {
             muzzleFlash.Play();
 
