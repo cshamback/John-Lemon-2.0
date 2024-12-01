@@ -42,11 +42,21 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if john doesn't have a gun currently, hide the gun mesh
+        // if he does, show it 
+        if (damage > 0)
+        {
+            mesh.enabled = true;
+        }
+        else
+        {
+            mesh.enabled = false;
+        }
+
         // todo: add check if there is anything to reload 
         // reloading does not change the total count of ammo, only moves stuff around 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Debug.Log("R has been pressed.");
             // do math: 
             if (totalAmmo <= maxAmmo) // if current total ammo is less than what can be loaded, load all of it
             {
