@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 160410370}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.54, y: 0.53999996, z: 2.48}
+  m_LocalPosition: {x: -2.54, y: 0.68, z: 2.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1196,40 +1196,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1639094757}
     - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: maxAmmo
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: totalAmmo
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: ammoCountText
-      value: 
-      objectReference: {fileID: 2029212384}
-    - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: currentLoaded
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
       propertyPath: totalAmmoText
       value: 
       objectReference: {fileID: 2029212384}
     - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: currentAmmoText
-      value: 
-      objectReference: {fileID: 540093737}
-    - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
       propertyPath: currentLoadedText
       value: 
       objectReference: {fileID: 540093737}
-    - target: {fileID: 3406860342912314804, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_TagString
-      value: EquippedGun
-      objectReference: {fileID: 0}
+    - target: {fileID: 5133338035026031298, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: hud
+      value: 
+      objectReference: {fileID: 1660124509}
+    - target: {fileID: 5133338035026031298, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: sight
+      value: 
+      objectReference: {fileID: 1639094757}
+    - target: {fileID: 5133338035026031298, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: totalAmmoText
+      value: 
+      objectReference: {fileID: 2029212384}
+    - target: {fileID: 5133338035026031298, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: currentLoadedText
+      value: 
+      objectReference: {fileID: 540093737}
     m_RemovedComponents:
-    - {fileID: 7901620382956989203, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
     - {fileID: 4861530506746427510, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+    - {fileID: 7901620382956989203, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

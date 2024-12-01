@@ -151,6 +151,11 @@ public class PlayerController : MonoBehaviour
             projectileAnchor.StopAiming(); // hides laser sight
             projectileAnchor.transform.localPosition = anchorOriginalPosition; // puts gun back after player done aiming
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        {
+            animator.Play("Shoot");
+        }
     }
 
     // used by SceneSwitcher/GameManager to get gun's data
