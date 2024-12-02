@@ -54,6 +54,11 @@ public class PlayerController : MonoBehaviour
         return Input.GetMouseButton(1) && gun.damage != 0;
     }
 
+    private bool checkShoot()
+    {
+        return Input.GetMouseButtonDown(0);
+    }
+
     private void PlayerMovement()
     {
         // Use transform.rotate API. Use the declaration that uses axis of rotation
@@ -63,6 +68,7 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0, playerInput.x * playerRotation * Time.deltaTime, 0);
 
         bool isAiming = checkForAim();
+        bool isShooting = checkShoot();
 
         // if aiming, don't allow movement
         // just do animations
@@ -72,13 +78,25 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsWalking", false);
             animator.SetBool("hasGun", gun.damage > 0);
 
+            if (isAiming && isShooting)
+            {
+                animator.SetBool("isShooting", true);
+            }
+
+            else
+            {
+                animator.SetBool("isShooting", false);
+            }
+
             /*Debug.Log("Anchor original position: " + anchorOriginalPosition +
                 " Anchor current position: " + projectileAnchor.transform.position +
                 " Anchor local position: " + projectileAnchor.transform.localPosition);*/
         }
+
         else // not aiming: allow movement! Also, set animations
         {
             // let him stop aiming please for the love of got
+            animator.SetBool("isShooting", false);
             animator.SetBool("isAiming", false);
             animator.SetBool("hasGun", gun.damage > 0);
 
@@ -150,11 +168,6 @@ public class PlayerController : MonoBehaviour
         {
             projectileAnchor.StopAiming(); // hides laser sight
             projectileAnchor.transform.localPosition = anchorOriginalPosition; // puts gun back after player done aiming
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-        {
-            animator.Play("Shoot");
         }
     }
 

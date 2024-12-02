@@ -36,9 +36,17 @@ public class Interactible : MonoBehaviour
     [Header("Keys Only: ")]
     public string doorName;
 
+    [Header("Camera Transition:")]
+    public Transform targetPos;
+    private Transform mainCameraTransform;
+
+    [Header("Disable Interactible group:")]
+    public GameObject interactibleGroup;
+
     // Start is called before the first frame update
     void Start()
     {
+        mainCameraTransform = Camera.main.transform;
         tooltipText.enabled = false;
 
         john = GameObject.FindGameObjectWithTag("Player");
@@ -117,6 +125,9 @@ public class Interactible : MonoBehaviour
                         // weapon cannot be picked up again
                         Destroy(gameObject);
                         tooltipText.enabled = false;
+                        interactibleGroup.gameObject.SetActive(false);
+                        mainCameraTransform.position = targetPos.position;
+                        mainCameraTransform.rotation = targetPos.rotation;
 
                         break;
                     case eObjectType.door:
@@ -150,6 +161,9 @@ public class Interactible : MonoBehaviour
                             {
                                 GameManager.sGameManager.keyDict[pair.Key] = true;
                                 Debug.Log("Found key-value pair. Updating keyDict. New key: " + pair.Key + " Value: " + GameManager.sGameManager.keyDict[pair.Key]);
+                                interactibleGroup.gameObject.SetActive(false);
+                                mainCameraTransform.position = targetPos.position;
+                                mainCameraTransform.rotation = targetPos.rotation;
                                 break;
                             }
                         }
