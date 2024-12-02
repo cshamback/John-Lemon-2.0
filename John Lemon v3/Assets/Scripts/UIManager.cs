@@ -69,7 +69,7 @@ public class UIManager : MonoBehaviour
         // as such, UIManager must check if it is open and if so close HUD
         if (readableObjectOpen)
         {
-            hud.SetActive(false);
+            SetVisibility(hud, true);
             Time.timeScale = 0f;
         }
 
