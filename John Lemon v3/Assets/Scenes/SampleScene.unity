@@ -5913,6 +5913,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2529764149753246452, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529764149753246452, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: LightsModule.light
+      value: 
+      objectReference: {fileID: 457130191}
     - target: {fileID: 3063001168694447681, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.61
@@ -5985,11 +5993,21 @@ PrefabInstance:
       propertyPath: currentLoadedText
       value: 
       objectReference: {fileID: 190788764}
+    - target: {fileID: 8590202681297134747, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1141119989693624423, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+--- !u!108 &457130191 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 4134036393076281790, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+  m_PrefabInstance: {fileID: 457130190}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &457661388
 GameObject:
   m_ObjectHideFlags: 0

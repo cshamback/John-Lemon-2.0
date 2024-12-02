@@ -90,7 +90,7 @@ public class Interactible : MonoBehaviour
 
                         // open readableObject ui with correct image
                         readableCanvasImage.sprite = readableImage;
-                        readableCanvas.SetActive(true);
+                        UIManager.S.SetVisibility(readableCanvas, false);
 
                         break;
                     case eObjectType.ammo:
