@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.46f1 (8e9b8558c41a) revision 9345925'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 16027 MB
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 12067 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,19 @@ C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Unity.exe
 -name
 AssetImportWorker1
 -projectPath
-C:/Users/csham/OneDrive/Desktop/UnityGames/John-Lemon-2.0/John Lemon v3
+C:/Users/hcass/OneDrive/Desktop/Lemon Project/John-Lemon-2.0/John Lemon v3
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
+<<<<<<< Updated upstream
 61370
 Successfully changed project path to: C:/Users/csham/OneDrive/Desktop/UnityGames/John-Lemon-2.0/John Lemon v3
 C:/Users/csham/OneDrive/Desktop/UnityGames/John-Lemon-2.0/John Lemon v3
+=======
+59969
+Successfully changed project path to: C:/Users/hcass/OneDrive/Desktop/Lemon Project/John-Lemon-2.0/John Lemon v3
+C:/Users/hcass/OneDrive/Desktop/Lemon Project/John-Lemon-2.0/John Lemon v3
+>>>>>>> Stashed changes
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,6 +55,7 @@ C:/Users/csham/OneDrive/Desktop/UnityGames/John-Lemon-2.0/John Lemon v3
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< Updated upstream
 Player connection [22976]  Target information:
 
 Player connection [22976]  * "[IP] 192.168.0.106 [Port] 0 [Flags] 2 [Guid] 2479507260 [EditorId] 2479507260 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-FF7P8QQP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
@@ -57,32 +64,60 @@ Player connection [22976] Host joined multi-casting on [225.0.0.222:54997]...
 Player connection [22976] Host joined alternative multi-casting on [225.0.0.222:34997]...
 [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
 Refreshing native plugins compatible for Editor in 7.78 ms, found 3 plugins.
+=======
+Player connection [50248]  Target information:
+
+Player connection [50248]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1698749055 [EditorId] 1698749055 [Version] 1048832 [Id] WindowsEditor(7,Balegdeh) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [50248]  * "[IP] 192.168.1.211 [Port] 0 [Flags] 2 [Guid] 1698749055 [EditorId] 1698749055 [Version] 1048832 [Id] WindowsEditor(7,Balegdeh) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [50248] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [50248] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+Refreshing native plugins compatible for Editor in 55.94 ms, found 3 plugins.
+>>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.46f1 (8e9b8558c41a)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/csham/OneDrive/Desktop/UnityGames/John-Lemon-2.0/John Lemon v3/Assets
+[Subsystems] Discovering subsystems at path C:/Users/hcass/OneDrive/Desktop/Lemon Project/John-Lemon-2.0/John Lemon v3/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x46a8)
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x9a49)
     Vendor:   Intel
-    VRAM:     8013 MB
-    Driver:   31.0.101.5186
+    VRAM:     6033 MB
+    Driver:   30.0.101.1404
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56688
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56624
+>>>>>>> Stashed changes
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+<<<<<<< Updated upstream
 Registered in 0.007796 seconds.
 - Loaded All Assemblies, in  0.330 seconds
+=======
+Registered in 1.979297 seconds.
+- Loaded All Assemblies, in 20.370 seconds
+>>>>>>> Stashed changes
 Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 1316 ms
 Native extension for WebGL target not found
-We weren't able to parse search user settings at C:/Users/csham/OneDrive/Desktop/UnityGames/John-Lemon-2.0/John Lemon v3/UserSettings/Search.settings. We will fallback to default settings.
-UnityEngine.UnityException: SJSON Parse Error (C:/Users/csham/OneDrive/Desktop/UnityGames/John-Lemon-2.0/John Lemon v3/UserSettings/Search.settings) at line 11: Error consuming: =
+We weren't able to parse search user settings at C:/Users/hcass/OneDrive/Desktop/Lemon Project/John-Lemon-2.0/John Lemon v3/UserSettings/Search.settings. We will fallback to default settings.
+UnityEngine.UnityException: SJSON Parse Error (C:/Users/hcass/OneDrive/Desktop/Lemon Project/John-Lemon-2.0/John Lemon v3/UserSettings/Search.settings) at line 11: Error consuming: =
 
 scopes = {
 
@@ -103,13 +138,20 @@ System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.Runti
 UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 Mono: successfully reloaded assembly
+<<<<<<< Updated upstream
 - Finished resetting the current domain, in  0.256 seconds
 Domain Reload Profiling: 586ms
 	BeginReloadAssembly (100ms)
+=======
+- Finished resetting the current domain, in  3.020 seconds
+Domain Reload Profiling: 23383ms
+	BeginReloadAssembly (15549ms)
+>>>>>>> Stashed changes
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 		CreateAndSetChildDomain (1ms)
 	RebuildCommonClasses (30ms)
 	RebuildNativeTypeToScriptingClass (8ms)
@@ -133,6 +175,31 @@ Domain Reload Profiling: 586ms
 			BeforeProcessingInitializeOnLoad (2ms)
 			ProcessInitializeOnLoadAttributes (145ms)
 			ProcessInitializeOnLoadMethodAttributes (46ms)
+=======
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (117ms)
+	RebuildNativeTypeToScriptingClass (43ms)
+	initialDomainReloadingComplete (2181ms)
+	LoadAllAssembliesAndSetupDomain (2471ms)
+		LoadAssemblies (15543ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (2458ms)
+			TypeCache.Refresh (2451ms)
+				TypeCache.ScanAssembly (2396ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (3021ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2883ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2384ms)
+			SetLoadedEditorAssemblies (12ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (5ms)
+			ProcessInitializeOnLoadAttributes (349ms)
+			ProcessInitializeOnLoadMethodAttributes (132ms)
+>>>>>>> Stashed changes
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -141,11 +208,17 @@ Domain Reload Profiling: 586ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
+<<<<<<< Updated upstream
 - Loaded All Assemblies, in  0.697 seconds
+=======
+- Loaded All Assemblies, in  5.745 seconds
+>>>>>>> Stashed changes
 Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
 Native extension for WebGL target not found
-We weren't able to parse search user settings at C:/Users/csham/OneDrive/Desktop/UnityGames/John-Lemon-2.0/John Lemon v3/UserSettings/Search.settings. We will fallback to default settings.
-UnityEngine.UnityException: SJSON Parse Error (C:/Users/csham/OneDrive/Desktop/UnityGames/John-Lemon-2.0/John Lemon v3/UserSettings/Search.settings) at line 11: Error consuming: =
+We weren't able to parse search user settings at C:/Users/hcass/OneDrive/Desktop/Lemon Project/John-Lemon-2.0/John Lemon v3/UserSettings/Search.settings. We will fallback to default settings.
+UnityEngine.UnityException: SJSON Parse Error (C:/Users/hcass/OneDrive/Desktop/Lemon Project/John-Lemon-2.0/John Lemon v3/UserSettings/Search.settings) at line 11: Error consuming: =
 
 scopes = {
 
@@ -170,6 +243,7 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
+<<<<<<< Updated upstream
 - Finished resetting the current domain, in  0.684 seconds
 Domain Reload Profiling: 1380ms
 	BeginReloadAssembly (158ms)
@@ -802,11 +876,17 @@ Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  1.048 seconds
 Domain Reload Profiling: 2241ms
 	BeginReloadAssembly (213ms)
+=======
+- Finished resetting the current domain, in  1.576 seconds
+Domain Reload Profiling: 7315ms
+	BeginReloadAssembly (298ms)
+>>>>>>> Stashed changes
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (40ms)
+<<<<<<< Updated upstream
 	RebuildCommonClasses (48ms)
 	RebuildNativeTypeToScriptingClass (110ms)
 	initialDomainReloadingComplete (53ms)
@@ -2096,8 +2176,42 @@ Unloading 3671 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 25 unused Assets / (1.8 MB). Loaded Objects now: 4288.
 Memory consumption went from 146.6 MB to 144.8 MB.
 Total: 7.074500 ms (FindLiveObjects: 0.710100 ms CreateObjectMapping: 0.209800 ms MarkObjects: 5.125200 ms  DeleteObjects: 1.020000 ms)
+=======
+	RebuildCommonClasses (64ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (89ms)
+	LoadAllAssembliesAndSetupDomain (5265ms)
+		LoadAssemblies (4687ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (776ms)
+			TypeCache.Refresh (729ms)
+				TypeCache.ScanAssembly (581ms)
+			ScanForSourceGeneratedMonoScriptInfo (32ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1577ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1119ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (49ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (107ms)
+			ProcessInitializeOnLoadAttributes (882ms)
+			ProcessInitializeOnLoadMethodAttributes (58ms)
+			AfterProcessingInitializeOnLoad (18ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (170ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 9.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3721 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 33 unused Assets / (1.8 MB). Loaded Objects now: 4187.
+Memory consumption went from 151.6 MB to 149.8 MB.
+Total: 9.411300 ms (FindLiveObjects: 0.704900 ms CreateObjectMapping: 0.298400 ms MarkObjects: 7.206300 ms  DeleteObjects: 1.200000 ms)
+>>>>>>> Stashed changes
 
-Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -2112,6 +2226,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< Updated upstream
 Received Prepare
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
@@ -2198,3 +2313,50 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+=======
+Received Import Request.
+  Time since last request: 1042181.614399 seconds.
+  path: Assets/Prefabs/Interactibles/ReadableObject Variant.prefab
+  artifactKey: Guid(c55545bc019d23a41bab5067db5f9591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Interactibles/ReadableObject Variant.prefab using Guid(c55545bc019d23a41bab5067db5f9591) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '98fdb941326aab5bd67f6201aeadd9bb') in 0.318301 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 56
+========================================================================
+Received Import Request.
+  Time since last request: 180.481697 seconds.
+  path: Assets/UI/blood/blood-splatter-png-44466.png
+  artifactKey: Guid(587b8c26eb4d49c4ebc37c914d81c265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/blood/blood-splatter-png-44466.png using Guid(587b8c26eb4d49c4ebc37c914d81c265) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'b826bccbe9d89fac6e1b9b5a8aeb74fe') in 0.208873 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/UI/buttons/Right Arrow.png
+  artifactKey: Guid(7cf2f46063edb3445a4b32cbd687b51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/buttons/Right Arrow.png using Guid(7cf2f46063edb3445a4b32cbd687b51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '0eb014df5521ef8baf81653964f203ca') in 0.046904 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/OutlineEffect/Samples/Demo/Content/logo.png
+  artifactKey: Guid(623b31f522f7b9f4882b10313a54de7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OutlineEffect/Samples/Demo/Content/logo.png using Guid(623b31f522f7b9f4882b10313a54de7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '2ce5f55530c7177095a9fecd6f7c6d92') in 0.087358 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
+>>>>>>> Stashed changes
