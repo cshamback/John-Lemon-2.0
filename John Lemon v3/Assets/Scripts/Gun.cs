@@ -30,13 +30,16 @@ public class Gun : MonoBehaviour
 
     public ParticleSystem muzzleFlash;
 
-    public MeshRenderer mesh;
+    public MeshRenderer mesh; // mesh of new gun
+    [SerializeField] private MeshRenderer johnsGunMesh; // mesh of gun john holds (static) - component of this GO 
 
     // Start is called before the first frame update
     void Start()
     {
         sight.SetActive(false);
         hud.SetActive(true);
+
+        johnsGunMesh = john.GetComponentInChildren<MeshRenderer>();
     }
 
     // Update is called once per frame
@@ -46,11 +49,12 @@ public class Gun : MonoBehaviour
         // if he does, show it 
         if (damage > 0)
         {
-            mesh.enabled = true;
+            Debug.Log("Trying to set mesh to enabled on gameobject " + gameObject.name);
+            johnsGunMesh.enabled = true;
         }
         else
         {
-            mesh.enabled = false;
+            johnsGunMesh.enabled = false;
         }
 
         // todo: add check if there is anything to reload 
