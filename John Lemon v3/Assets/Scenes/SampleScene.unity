@@ -845,7 +845,7 @@ MonoBehaviour:
   outline: {fileID: 39196591}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 0}
+  john: {fileID: 829818297}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -3121,6 +3121,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 577195262}
     m_Modifications:
+    - target: {fileID: 1359066462440298858, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1714551337853194573, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4299,6 +4303,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.86, y: 3.41, z: 9.7}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &315177407 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 94643250475693944, guid: 2dbb52667d7db0f4f9230493c8aa2a8d, type: 3}
+  m_PrefabInstance: {fileID: 996780292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &316162758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4817,7 +4826,7 @@ MonoBehaviour:
   outline: {fileID: 347517999}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 0}
+  john: {fileID: 829818297}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -5119,6 +5128,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 758117891}
     m_Modifications:
+    - target: {fileID: 1359066462440298858, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1714551337853194573, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6439,6 +6452,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1226610925}
     m_Modifications:
+    - target: {fileID: 1359066462440298858, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1714551337853194573, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6707,6 +6724,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 787230220588927689, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2358624406306625427, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
       propertyPath: m_LocalPosition.x
       value: 107.5
@@ -7087,6 +7108,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 760624627}
     m_Modifications:
+    - target: {fileID: 1359066462440298858, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1714551337853194573, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -7340,6 +7365,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1903498717}
     m_Modifications:
+    - target: {fileID: 1359066462440298858, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1714551337853194573, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -9002,6 +9031,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1393546844}
     m_Modifications:
+    - target: {fileID: 1359066462440298858, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1714551337853194573, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -9435,6 +9468,67 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.64, y: 3.41, z: 5.42}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &721664081
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1565987592203063198, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: m_Name
+      value: JohnLemon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+      propertyPath: sight
+      value: 
+      objectReference: {fileID: 315177407}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
 --- !u!1 &723767046
 GameObject:
   m_ObjectHideFlags: 0
@@ -10342,7 +10436,7 @@ MonoBehaviour:
   outline: {fileID: 758117892}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 0}
+  john: {fileID: 829818297}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -10471,7 +10565,7 @@ MonoBehaviour:
   outline: {fileID: 760624628}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 0}
+  john: {fileID: 829818297}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -11087,6 +11181,11 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &829818297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1565987592203063198, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
+  m_PrefabInstance: {fileID: 721664081}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832910546
 GameObject:
   m_ObjectHideFlags: 0
@@ -11261,6 +11360,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1993156705}
     m_Modifications:
+    - target: {fileID: 1359066462440298858, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1714551337853194573, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -11359,6 +11462,17 @@ RectTransform:
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5704746910692252991, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
   m_PrefabInstance: {fileID: 837465916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &850838139 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5704746910692252991, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
+  m_PrefabInstance: {fileID: 2009926892}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -12181,6 +12295,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 347517998}
     m_Modifications:
+    - target: {fileID: 1359066462440298858, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1714551337853194573, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -13488,6 +13606,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1473047054}
     m_Modifications:
+    - target: {fileID: 1359066462440298858, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1714551337853194573, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -13732,7 +13854,7 @@ MonoBehaviour:
   outline: {fileID: 1084592747}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 0}
+  john: {fileID: 829818297}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -15722,7 +15844,7 @@ MonoBehaviour:
   outline: {fileID: 1226610926}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 0}
+  john: {fileID: 829818297}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -20896,6 +21018,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1990443979}
     m_Modifications:
+    - target: {fileID: 1359066462440298858, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1714551337853194573, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -21107,7 +21233,7 @@ MonoBehaviour:
   outline: {fileID: 1473047055}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 0}
+  john: {fileID: 829818297}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -22165,6 +22291,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39196589}
     m_Modifications:
+    - target: {fileID: 1359066462440298858, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1714551337853194573, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -23569,6 +23699,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1084592746}
     m_Modifications:
+    - target: {fileID: 1359066462440298858, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1714551337853194573, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -24053,8 +24187,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outline: {fileID: 1806194268}
   type: 0
-  tooltipText: {fileID: 494237924}
-  john: {fileID: 0}
+  tooltipText: {fileID: 850838139}
+  john: {fileID: 829818297}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -26034,7 +26168,7 @@ MonoBehaviour:
   outline: {fileID: 1990443980}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 0}
+  john: {fileID: 829818297}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -26197,6 +26331,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1806194267}
     m_Modifications:
+    - target: {fileID: 1359066462440298858, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1714551337853194573, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -28078,3 +28216,4 @@ SceneRoots:
   - {fileID: 577195262}
   - {fileID: 1446972110}
   - {fileID: 1427395511}
+  - {fileID: 721664081}
