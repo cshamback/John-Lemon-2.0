@@ -845,7 +845,7 @@ MonoBehaviour:
   outline: {fileID: 39196591}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 1533057451}
+  john: {fileID: 0}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -2288,28 +2288,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 142175574}
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
---- !u!114 &190788763 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 193199728028546754, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
-  m_PrefabInstance: {fileID: 494237919}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &190788764 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3766053537412268816, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
-  m_PrefabInstance: {fileID: 494237919}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &194344136
 GameObject:
   m_ObjectHideFlags: 0
@@ -4839,7 +4817,7 @@ MonoBehaviour:
   outline: {fileID: 347517999}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 1533057451}
+  john: {fileID: 0}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -6370,111 +6348,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.28, y: 3.41, z: 5.46}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1001 &457130190
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1565987592203063198, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_Name
-      value: JohnLemon
-      objectReference: {fileID: 0}
-    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -19.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3063001168694447681, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 32.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 3063001168694447681, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3063001168694447681, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -20.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: hud
-      value: 
-      objectReference: {fileID: 494237922}
-    - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: range
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: sight
-      value: 
-      objectReference: {fileID: 996780293}
-    - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: damage
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: maxAmmo
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: totalAmmoText
-      value: 
-      objectReference: {fileID: 190788763}
-    - target: {fileID: 3157752912501557841, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: currentLoadedText
-      value: 
-      objectReference: {fileID: 190788764}
-    - target: {fileID: 3406860342912314804, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_TagString
-      value: EquippedGun
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861530506746427510, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5d284e30671c98747b7adddadbe815cd, type: 2}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
 --- !u!1 &457661388
 GameObject:
   m_ObjectHideFlags: 0
@@ -7947,7 +7820,7 @@ MonoBehaviour:
   outline: {fileID: 1015102775}
   type: 2
   tooltipText: {fileID: 258382504}
-  john: {fileID: 1533057451}
+  john: {fileID: 0}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 10
@@ -9090,7 +8963,7 @@ MonoBehaviour:
   outline: {fileID: 684649993}
   type: 4
   tooltipText: {fileID: 1238303236}
-  john: {fileID: 1533057451}
+  john: {fileID: 0}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -10469,7 +10342,7 @@ MonoBehaviour:
   outline: {fileID: 758117892}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 1533057451}
+  john: {fileID: 0}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -10598,7 +10471,7 @@ MonoBehaviour:
   outline: {fileID: 760624628}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 1533057451}
+  john: {fileID: 0}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -11649,7 +11522,7 @@ MonoBehaviour:
   outline: {fileID: 271736945}
   type: 4
   tooltipText: {fileID: 549725363}
-  john: {fileID: 1533057451}
+  john: {fileID: 0}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -12773,11 +12646,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dbb52667d7db0f4f9230493c8aa2a8d, type: 3}
---- !u!1 &996780293 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 94643250475693944, guid: 2dbb52667d7db0f4f9230493c8aa2a8d, type: 3}
-  m_PrefabInstance: {fileID: 996780292}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1015102772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13864,7 +13732,7 @@ MonoBehaviour:
   outline: {fileID: 1084592747}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 1533057451}
+  john: {fileID: 0}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -15854,7 +15722,7 @@ MonoBehaviour:
   outline: {fileID: 1226610926}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 1533057451}
+  john: {fileID: 0}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -19891,7 +19759,7 @@ MonoBehaviour:
   outline: {fileID: 1499200409}
   type: 3
   tooltipText: {fileID: 686117453}
-  john: {fileID: 1533057451}
+  john: {fileID: 0}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -21239,7 +21107,7 @@ MonoBehaviour:
   outline: {fileID: 1473047055}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 1533057451}
+  john: {fileID: 0}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -21515,11 +21383,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!1 &1533057451 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1565987592203063198, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-  m_PrefabInstance: {fileID: 457130190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1543604342
 GameObject:
   m_ObjectHideFlags: 0
@@ -21927,7 +21790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialComplete: 0
-  john: {fileID: 1533057451}
+  john: {fileID: 0}
   gun: {fileID: 0}
   sceneSwitcher: {fileID: 0}
   savedLoadedAmmo: 0
@@ -24191,7 +24054,7 @@ MonoBehaviour:
   outline: {fileID: 1806194268}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 1533057451}
+  john: {fileID: 0}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -26171,7 +26034,7 @@ MonoBehaviour:
   outline: {fileID: 1990443980}
   type: 0
   tooltipText: {fileID: 494237924}
-  john: {fileID: 1533057451}
+  john: {fileID: 0}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -26220,7 +26083,7 @@ MonoBehaviour:
   outline: {fileID: 1371678664}
   type: 3
   tooltipText: {fileID: 837465918}
-  john: {fileID: 1533057451}
+  john: {fileID: 0}
   gun: {fileID: 0}
   ammoAmount: 0
   damageAmount: 0
@@ -26326,24 +26189,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 142175574}
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
-<<<<<<< Updated upstream
-=======
---- !u!1 &2007904021 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8751113083673242505, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-  m_PrefabInstance: {fileID: 457130190}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2007904023 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5133338035026031298, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
-  m_PrefabInstance: {fileID: 457130190}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2007904021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eb6b8f9ae569d342af800f11470320a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2009926892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26446,7 +26291,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1714551337853194573, guid: c9b12e84864484a44b4953e5e8bdb775, type: 3}
   m_PrefabInstance: {fileID: 2009926892}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1 &2019077559
 GameObject:
   m_ObjectHideFlags: 0
@@ -28227,7 +28071,6 @@ SceneRoots:
   - {fileID: 1903498717}
   - {fileID: 633142474}
   - {fileID: 407213335}
-  - {fileID: 457130190}
   - {fileID: 494237919}
   - {fileID: 996780292}
   - {fileID: 754164667}
