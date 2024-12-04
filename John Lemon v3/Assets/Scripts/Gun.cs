@@ -49,7 +49,6 @@ public class Gun : MonoBehaviour
         // if he does, show it 
         if (damage > 0)
         {
-            Debug.Log("Trying to set mesh to enabled on gameobject " + gameObject.name);
             johnsGunMesh.enabled = true;
         }
         else

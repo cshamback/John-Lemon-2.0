@@ -148,7 +148,6 @@ public class PlayerController : MonoBehaviour
             projectileAnchor.Aim();
 
             // allow player to move gun up/down with W and S only when aiming
-
             if (Input.GetKey(KeyCode.W))
             { // move projectileAnchor up, within limit
                 if (projectileAnchor.transform.localPosition.z < anchorOriginalPosition.z + anchorVerticalRange)

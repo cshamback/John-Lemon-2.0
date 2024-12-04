@@ -40,6 +40,14 @@ public class ToolTipManager : MonoBehaviour
         DontDestroyOnLoad(this);
 
         FindToolTips();
+
+        tooltipGroup.enabled = true;
+        tooltipText.enabled = true;
+        tooltipText.text = "";
+
+        /*Debug.Log("Just set tooltip text active. Active: " + tooltipText.IsActive()
+        + " Enabled: " + tooltipText.enabled
+        + " Value: " + tooltipText.text);*/
     }
 
     // Update is called once per frame
@@ -53,6 +61,7 @@ public class ToolTipManager : MonoBehaviour
         {
             if (conditions[currentTip] == true && tooltipGroup.alpha == 0)
             {
+                //Debug.Log("Displaying current tooltip: " + toolTips[currentTip]);
                 tooltipGroup.alpha = 0.5f;
                 tooltipText.text = toolTips[currentTip];
             }
@@ -60,6 +69,7 @@ public class ToolTipManager : MonoBehaviour
             // stop displaying it -> get ready for the next one
             else if (conditions[currentTip] == false && tooltipGroup.alpha != 0)
             {
+                //Debug.Log("Hiding tooltip: " + conditions[currentTip]);
                 tooltipGroup.alpha = 0;
                 currentTip++;
             }

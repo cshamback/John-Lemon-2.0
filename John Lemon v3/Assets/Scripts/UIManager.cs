@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
 
     private Gun gun;
 
-    private bool readableObjectOpen = false;
+    public bool readableObjectOpen = false;
     public bool pauseMenuOpen = false;
     public bool creditsOpen = false;
     private bool hudOpen = true;
@@ -48,6 +48,12 @@ public class UIManager : MonoBehaviour
 
         currentAmmo.text = gun.currentLoaded.ToString();
         loadedAmmo.text = gun.totalAmmo.ToString();
+
+        SetVisibility(readableObject, true);
+        SetVisibility(pauseMenu, true);
+        SetVisibility(credits, true);
+
+        readableObjectOpen = false;
     }
 
     // Update is called once per frame
@@ -55,13 +61,20 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
+            Debug.Log("Escape key pressed. CreditsOpen: " + creditsOpen + " readableObjOpen: " + readableObjectOpen);
             if (creditsOpen)
             {
                 CloseOpenUI(credits, creditsOpen);
             }
             if (readableObjectOpen)
             {
+                Debug.Log("Esc. pressed with readable object open. Closing readable object.");
                 CloseOpenUI(readableObject, readableObjectOpen);
+                readableObjectOpen = false;
+            }
+            else
+            {
+                Debug.Log("ReadableObject not open.");
             }
         }
 
@@ -77,14 +90,17 @@ public class UIManager : MonoBehaviour
 
     public void CloseOpenUI(GameObject ui, bool isOpen)
     {
-        print("Closing open ui: " + ui.name);
-        Time.timeScale = 1.0f;
+        //print("Closing open ui: " + ui.name);
 
         PauseMenu.isPaused = false;
         PauseMenu.allowedToPause = false;
 
         SetVisibility(ui, isOpen);
         SetVisibility(hud, hudOpen);
+        //Debug.Log("PauseMenuOpen: " + pauseMenuOpen);
+        SetVisibility(pauseMenu, true);
+
+        Time.timeScale = 1.0f;
     }
 
     public void SetVisibility(GameObject ui, bool isOpen)
@@ -100,9 +116,16 @@ public class UIManager : MonoBehaviour
         { // if currently closed, "open" it by setting alpha to 0.5
             print("IsOpen for " + ui.name + ": " + isOpen + " setting alpha to 0.5.");
             ui.GetComponent<CanvasGroup>().alpha = 0.5f;
+            //Debug.Log("Ui name: " + ui.name + " Current alpha: " + ui.GetComponent<CanvasGroup>().alpha);
         }
 
         isOpen = !isOpen;
-        print("isOpen is now: " + isOpen);
+        print("isOpen is now: " + isOpen + " for " + ui.name);
+
+        if (ui.name == "ReadableObject")
+        {
+            Debug.Log("Opened readable object.");
+            readableObjectOpen = true;
+        }
     }
 }

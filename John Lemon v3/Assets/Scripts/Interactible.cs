@@ -17,7 +17,6 @@ public class Interactible : MonoBehaviour
     public GameObject john; // used to get john's position and decide if close enough
 
     [Header("Ammo and Weapons Only: ")]
-    [SerializeField]
     private Gun gun;
     public int ammoAmount;
     public int damageAmount;
@@ -56,6 +55,11 @@ public class Interactible : MonoBehaviour
         {
             doorScript = door.GetComponent<Door>();
         }
+
+        if (john == null)
+        {
+            Debug.Log("Could not find John in gameobject " + gameObject.name);
+        }
     }
 
     // Update is called once per frame
@@ -64,9 +68,12 @@ public class Interactible : MonoBehaviour
         // distance between this object and john is < 2m
         float distance = Vector3.Distance(john.transform.position, gameObject.transform.position);
 
+        if (UIManager.S.readableObjectOpen || UIManager.S.creditsOpen)
+            tooltipText.enabled = false;
+
         if (distance < 2.5)
         {
-            Debug.Log("John is in range.");
+            //Debug.Log("John is in range.");
             // enable outline 
             outline.enabled = true;
 
@@ -85,17 +92,18 @@ public class Interactible : MonoBehaviour
                 // set to the position of this gameobject in world space - move up 0.5m 
                 tooltipText.transform.position = Camera.main.WorldToScreenPoint(transform.position + (Vector3.up / 2));
             }
+
             tooltipText.enabled = true;
 
             // if E is pressed while in range, handle interaction
             if (Input.GetKeyDown(KeyCode.E))
             {
+                tooltipText.enabled = false;
+
                 print("Object selected: " + gameObject.name);
                 switch (type)
                 {
                     case eObjectType.readableObject:
-                        print("Readable object selected.");
-
                         // open readableObject ui with correct image
                         readableCanvasImage.sprite = readableImage;
                         UIManager.S.SetVisibility(readableCanvas, false);
