@@ -120,12 +120,18 @@ public class Crawler : MonoBehaviour
         animator.SetTrigger("JumpTrigger");
         Vector3 force = transform.forward * jumpVector.z + transform.up * jumpVector.y;
         rb.AddForce(force, ForceMode.Impulse); // Applies an impulse force in the forward direction.
-        Invoke("IsGrounded", 0.75f);
+        Invoke("IsGrounded", 0.9f);
         canHurt = false;
 
     }
     private void IsGrounded() //This is to check if the enemy has hit the ground yet.
     {
+        lookAtPlayer = true;
+        rb.velocity = Vector3.zero; //Resets the velocity of the rigidbody so it stops sliding.
+        //rb.constraints = RigidbodyConstraints.FreezeAll; //Freezes the y position of the rigidbody.
+        agent.isStopped = false; //Starts the agent moving again.
+
+        /*
         bool grounded = false;
         while(!grounded)
         {
@@ -138,6 +144,7 @@ public class Crawler : MonoBehaviour
                 agent.isStopped = false; //Starts the agent moving again.
             }
         }
+        */
     }
 
     public void takeDamage(int damage)
