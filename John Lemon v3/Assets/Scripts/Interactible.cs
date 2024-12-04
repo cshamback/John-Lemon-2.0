@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public enum eObjectType { readableObject, ammo, weapon, door, key }
 
@@ -69,7 +70,13 @@ public class Interactible : MonoBehaviour
         float distance = Vector3.Distance(john.transform.position, gameObject.transform.position);
 
         if (UIManager.S.readableObjectOpen || UIManager.S.creditsOpen)
+        {
             tooltipText.enabled = false;
+        }
+        else
+        {
+            tooltipText.enabled = true;
+        }
 
         if (distance < 2.5)
         {
@@ -93,19 +100,17 @@ public class Interactible : MonoBehaviour
                 tooltipText.transform.position = Camera.main.WorldToScreenPoint(transform.position + (Vector3.up / 2));
             }
 
-            tooltipText.enabled = true;
-
             // if E is pressed while in range, handle interaction
             if (Input.GetKeyDown(KeyCode.E))
             {
-                tooltipText.enabled = false;
 
-                print("Object selected: " + gameObject.name);
                 switch (type)
                 {
                     case eObjectType.readableObject:
                         // open readableObject ui with correct image
                         readableCanvasImage.sprite = readableImage;
+                        readableCanvasImage.preserveAspect = true;
+
                         UIManager.S.SetVisibility(readableCanvas, false);
 
                         break;

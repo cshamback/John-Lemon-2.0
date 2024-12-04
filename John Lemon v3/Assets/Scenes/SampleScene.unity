@@ -873,7 +873,7 @@ MonoBehaviour:
   range: 0
   gunMesh: {fileID: 0}
   readableImage: {fileID: 21300000, guid: a95334b1edd49dd43a821b8830247cf8, type: 3}
-  readableCanvasImage: {fileID: 573341594}
+  readableCanvasImage: {fileID: 934862099}
   readableCanvas: {fileID: 494237923}
   door: {fileID: 0}
   doorScript: {fileID: 0}
@@ -5008,7 +5008,7 @@ MonoBehaviour:
   range: 0
   gunMesh: {fileID: 0}
   readableImage: {fileID: 21300000, guid: 4d9eb0b894ca3c240ab75c7fe16930af, type: 3}
-  readableCanvasImage: {fileID: 573341594}
+  readableCanvasImage: {fileID: 934862099}
   readableCanvas: {fileID: 494237923}
   door: {fileID: 0}
   doorScript: {fileID: 0}
@@ -7015,6 +7015,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2324655070935088623, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_Color.a
+      value: 0.8392157
+      objectReference: {fileID: 0}
     - target: {fileID: 2358624406306625427, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
       propertyPath: m_LocalPosition.x
       value: 107.5
@@ -7151,9 +7155,65 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5605778993546394436, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.95800006
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605778993546394436, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.034707468
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605778993546394436, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 121.8792
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605778993546394436, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -59.2328
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605778993546394436, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.6470947
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605778993546394436, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 29.616913
+      objectReference: {fileID: 0}
     - target: {fileID: 6525771645678856927, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
       propertyPath: m_Name
       value: Menu UI System
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932993856495564233, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932993856495564233, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932993856495564233, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932993856495564233, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932993856495564233, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1672
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932993856495564233, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 909
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932993856495564233, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932993856495564233, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -35.49997
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8084,17 +8144,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &573341594 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2324655070935088623, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
-  m_PrefabInstance: {fileID: 494237919}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &576629243
@@ -10884,7 +10933,7 @@ MonoBehaviour:
   range: 0
   gunMesh: {fileID: 0}
   readableImage: {fileID: 21300000, guid: 6599f1fc5efb1f141bce7a3ce3c2777a, type: 3}
-  readableCanvasImage: {fileID: 573341594}
+  readableCanvasImage: {fileID: 934862099}
   readableCanvas: {fileID: 494237923}
   door: {fileID: 0}
   doorScript: {fileID: 0}
@@ -11014,7 +11063,7 @@ MonoBehaviour:
   range: 0
   gunMesh: {fileID: 0}
   readableImage: {fileID: 21300000, guid: e96d4448eac349045a747b53fec18a65, type: 3}
-  readableCanvasImage: {fileID: 573341594}
+  readableCanvasImage: {fileID: 934862099}
   readableCanvas: {fileID: 494237923}
   door: {fileID: 0}
   doorScript: {fileID: 0}
@@ -12632,6 +12681,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.62, y: 3.41, z: 6.64}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &934862099 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2886684951034695710, guid: e62272b7566079c4b8b6f14869fd4843, type: 3}
+  m_PrefabInstance: {fileID: 494237919}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &951717957
 GameObject:
   m_ObjectHideFlags: 0
@@ -14358,7 +14418,7 @@ MonoBehaviour:
   range: 0
   gunMesh: {fileID: 0}
   readableImage: {fileID: 21300000, guid: cdf53f0496979af408b4884e64c0c5bd, type: 3}
-  readableCanvasImage: {fileID: 573341594}
+  readableCanvasImage: {fileID: 934862099}
   readableCanvas: {fileID: 494237923}
   door: {fileID: 0}
   doorScript: {fileID: 0}
@@ -16387,7 +16447,7 @@ MonoBehaviour:
   range: 0
   gunMesh: {fileID: 0}
   readableImage: {fileID: 21300000, guid: 5fc660dc335b5f14fb5da3241c06e6b6, type: 3}
-  readableCanvasImage: {fileID: 573341594}
+  readableCanvasImage: {fileID: 934862099}
   readableCanvas: {fileID: 494237923}
   door: {fileID: 0}
   doorScript: {fileID: 0}
@@ -21847,7 +21907,7 @@ MonoBehaviour:
   range: 0
   gunMesh: {fileID: 0}
   readableImage: {fileID: 21300000, guid: 285c7cb6dbe02254a8004ff0fc446a8c, type: 3}
-  readableCanvasImage: {fileID: 573341594}
+  readableCanvasImage: {fileID: 934862099}
   readableCanvas: {fileID: 494237923}
   door: {fileID: 0}
   doorScript: {fileID: 0}
@@ -24803,7 +24863,7 @@ MonoBehaviour:
   range: 0
   gunMesh: {fileID: 0}
   readableImage: {fileID: 21300000, guid: 763ac8afd3fa4e14a9e89d259cd27972, type: 3}
-  readableCanvasImage: {fileID: 573341594}
+  readableCanvasImage: {fileID: 934862099}
   readableCanvas: {fileID: 494237923}
   door: {fileID: 0}
   doorScript: {fileID: 0}
@@ -26971,7 +27031,7 @@ MonoBehaviour:
   range: 0
   gunMesh: {fileID: 0}
   readableImage: {fileID: 21300000, guid: 5e3531693b0a17449b629d32e89a6d33, type: 3}
-  readableCanvasImage: {fileID: 573341594}
+  readableCanvasImage: {fileID: 934862099}
   readableCanvas: {fileID: 494237923}
   door: {fileID: 0}
   doorScript: {fileID: 0}

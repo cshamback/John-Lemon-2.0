@@ -96,7 +96,7 @@ public class UIManager : MonoBehaviour
         PauseMenu.allowedToPause = false;
 
         SetVisibility(ui, isOpen);
-        SetVisibility(hud, hudOpen);
+        SetVisibility(hud, false);
         //Debug.Log("PauseMenuOpen: " + pauseMenuOpen);
         SetVisibility(pauseMenu, true);
 
@@ -114,8 +114,15 @@ public class UIManager : MonoBehaviour
         }
         else
         { // if currently closed, "open" it by setting alpha to 0.5
-            print("IsOpen for " + ui.name + ": " + isOpen + " setting alpha to 0.5.");
-            ui.GetComponent<CanvasGroup>().alpha = 0.5f;
+            if (ui.name == "ReadableObject")
+            {
+                ui.GetComponent<CanvasGroup>().alpha = 1f;
+            }
+            else
+            {
+                print("IsOpen for " + ui.name + ": " + isOpen + " setting alpha to 0.5.");
+                ui.GetComponent<CanvasGroup>().alpha = 0.5f;
+            }
             //Debug.Log("Ui name: " + ui.name + " Current alpha: " + ui.GetComponent<CanvasGroup>().alpha);
         }
 
