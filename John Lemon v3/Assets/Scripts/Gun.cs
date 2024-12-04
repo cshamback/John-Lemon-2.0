@@ -150,8 +150,16 @@ public class Gun : MonoBehaviour
                         case "Enemy":
                             print("Enemy hit.");
 
-                            // enemies have their own classes
-                            // they take damage based on the current gun equipped 
+                            Crawler crawler = hit.transform.gameObject.GetComponent<Crawler>();
+                            if (crawler != null)
+                            {
+                                Debug.Log("Hit crawler");
+                                crawler.takeDamage(damage);
+                            }
+                            else
+                            {
+                                Debug.LogError("Could not find Target on gameObject " + hit.transform.gameObject.name);
+                            }
 
                             break;
                         default:

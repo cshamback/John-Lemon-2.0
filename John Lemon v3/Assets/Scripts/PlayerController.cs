@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private int health = 200; // the players health
+    [SerializeField] private ParticleSystem bloodSplat; // blood splatter effect when player takes damage
     public GameObject gunGO; // location on John's model he fires from
     public Gun gun;
     public Gun projectileAnchor; // handles Shoot() method
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravityValue = -9.81f;
 
     private Animator animator;
+    public UIManager uiManager;
 
     private void OnMove(InputValue value)
     {
@@ -157,5 +160,19 @@ public class PlayerController : MonoBehaviour
     public GameObject GetGun()
     {
         return gunGO;
+    }
+
+    public void hurtPlayer(int damage)
+    {
+        health -= damage;
+        bloodSplat.Play();
+        if(health <= 0)
+        {
+            bloodSplat.Play();
+            bloodSplat.Play();
+            uiManager.KillJohn();
+            //Destroy(gameObject, 0.25f); this was causing a bunch of errors, and you don't see them disapper anyways.
+            gameObject.SetActive(false); //trying this instead.
+        }
     }
 }
