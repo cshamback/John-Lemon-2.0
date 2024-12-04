@@ -32,7 +32,6 @@ public class Crawler : MonoBehaviour
     //components to deactivate
     CapsuleCollider toucher;
     SphereCollider youThere;
-    CapsuleCollider jumpTrigger;
     
 
     void Awake()
@@ -44,7 +43,6 @@ public class Crawler : MonoBehaviour
         enemyMap = GetComponentInChildren<Renderer>().material;
         toucher = GetComponent<CapsuleCollider>();
         youThere = GetComponent<SphereCollider>();
-        jumpTrigger = GetComponentInChildren<CapsuleCollider>();
 
         disToGround = collide.bounds.extents.y;
 
@@ -52,7 +50,6 @@ public class Crawler : MonoBehaviour
 
         toucher.enabled = false;
         youThere.enabled = false;
-        jumpTrigger.enabled = false;
     }
 
     public void Activate()
@@ -61,7 +58,6 @@ public class Crawler : MonoBehaviour
         canHurt = false;
         toucher.enabled = true;
         youThere.enabled = true;
-        jumpTrigger.enabled = true;
     }
 
     // Update is called once per frame
