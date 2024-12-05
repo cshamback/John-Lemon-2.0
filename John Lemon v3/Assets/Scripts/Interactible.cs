@@ -16,6 +16,8 @@ public class Interactible : MonoBehaviour
     public eObjectType type;
     public TextMeshProUGUI tooltipText;
     public GameObject john; // used to get john's position and decide if close enough
+    public GameObject enemies; //Use to set enemies to active once a weapon is picked up.
+    public GameObject tutorial;
 
     [Header("Ammo and Weapons Only: ")]
     private Gun gun;
@@ -134,6 +136,9 @@ public class Interactible : MonoBehaviour
                     case eObjectType.weapon:
                         print("Weapon picked up: " + gameObject.name);
                         gun.SetProperties(damageAmount, range, gunMesh);
+
+                        tutorial.SetActive(true); // enable tutorial once weapon is picked up
+                        enemies.SetActive(true); // set enemies to active once weapon is picked up
 
                         // weapon cannot be picked up again
                         Destroy(gameObject);

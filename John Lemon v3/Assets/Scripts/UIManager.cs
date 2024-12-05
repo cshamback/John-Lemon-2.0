@@ -5,6 +5,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.UI;
 
 // controls show/hide of all UI objects. 
 
@@ -15,7 +16,9 @@ public class UIManager : MonoBehaviour
     public GameObject readableObject;
     public GameObject credits;
     public GameObject hud;
-
+    public GameObject gameOver;
+    private GameObject deathCover;
+    private GameObject deathContent;
     private TextMeshProUGUI currentAmmo;
     private TextMeshProUGUI loadedAmmo;
 
@@ -25,6 +28,8 @@ public class UIManager : MonoBehaviour
     public bool pauseMenuOpen = false;
     public bool creditsOpen = false;
     private bool hudOpen = true;
+    private float m_Timer = 0f; //Timer for the fade in and out of the game over screen.
+    public float transitionDuration = 3.0f; //The duration of fade ins and outs. Used for Game Over.
 
     void Awake()
     {
@@ -134,5 +139,40 @@ public class UIManager : MonoBehaviour
             Debug.Log("Opened readable object.");
             readableObjectOpen = true;
         }
+    }
+
+        public void KillJohn()
+    {
+        gameOver.SetActive(true); //turns on the game object menu.
+        deathContent.SetActive(false); //make sure the other stuff is hidden.
+        StartCoroutine(FadeInAndOut());
+    }
+
+    private IEnumerator FadeInAndOut()
+    {
+        m_Timer = 0f; //Reset the timer.
+        Color coverColor = deathCover.GetComponent<Image>().color; //Get the color of the cover.
+
+        // Fade in
+        while (m_Timer < transitionDuration) //While the timer is less than the duration of the fade in and out.
+        {
+            m_Timer += Time.deltaTime; //update the timer.
+            coverColor.a = m_Timer / transitionDuration; //Update the alpha with the percent full the timer is.
+            deathCover.GetComponent<Image>().color = coverColor; //Give the cover the new alpha.
+            yield return null; //Wait for the next frame.
+        }
+
+        //Now that the cover is covering everything, we can sneakily turn the contents on behind it.
+        deathContent.SetActive(true);
+
+        // Fade out
+        while (m_Timer > 0) //While the timer is greater than 0.
+        {
+            m_Timer -= Time.deltaTime; //start reversing timer.
+            coverColor.a = m_Timer / transitionDuration; //Update the alpha with the percent full the timer is.
+            deathCover.GetComponent<Image>().color = coverColor; //Give the cover the new alpha.
+            yield return null; //Wait for the next frame.
+        }
+        deathCover.SetActive(false); //Turn off the cover so it can be interacted with.
     }
 }

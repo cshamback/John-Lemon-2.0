@@ -18,14 +18,7 @@ public class Observer : MonoBehaviour
         if(other.transform == player)
         {
             crawler.Jump();
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if(other.transform == player)
-        {
-            crawler.KeepWalking();
+            //Debug.Log("Player has entered the jump trigger");
         }
     }
 }
