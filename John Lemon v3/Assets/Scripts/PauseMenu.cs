@@ -15,6 +15,8 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pauseMenu.SetActive(false); //The button can be pushed even when menu is unpaused
+        //but only after you aim with the gun for the first time-
 
     }
 
@@ -31,6 +33,7 @@ public class PauseMenu : MonoBehaviour
             }
             else if (allowedToPause) // only pause if not closing something else
             { // pause
+                pauseMenu.SetActive(true);
                 UIManager.S.SetVisibility(pauseMenu, UIManager.S.pauseMenuOpen);
                 Time.timeScale = 0.0f;
 
@@ -77,6 +80,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
         UIManager.S.pauseMenuOpen = false;
         Debug.Log("Changed pauseMenuOpen to " + UIManager.S.pauseMenuOpen + " and isPaused to: " + isPaused);
+        pauseMenu.SetActive(false);
     }
 
     public void Credits()

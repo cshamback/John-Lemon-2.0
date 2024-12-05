@@ -136,7 +136,9 @@ public class Gun : MonoBehaviour
             // put laser sight on whatever is in the way
             // endpoint = (origin + direction * range)
             sight.SetActive(true);
-            sight.transform.parent = hit.transform; // make sight a child of hit object
+            //sight.transform.parent = hit.transform; // make sight a child of hit object
+            //commented out previous line because if you were aiming at the crawler and destroyed it,
+            //The sight would get destroyed too and cause an error loop and you couldn't shoot anymore.
             sight.transform.position = hit.point; // point is position where collider was hit
 
             // handle impact

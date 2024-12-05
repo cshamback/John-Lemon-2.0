@@ -54,6 +54,10 @@ public class UIManager : MonoBehaviour
         currentAmmo.text = gun.currentLoaded.ToString();
         loadedAmmo.text = gun.totalAmmo.ToString();
 
+        //The content of the game over screen is it's first child, and the cover is the second.
+        deathContent = gameOver.gameObject.transform.GetChild(0).gameObject;
+        deathCover = gameOver.gameObject.transform.GetChild(1).gameObject;
+
         SetVisibility(readableObject, true);
         SetVisibility(pauseMenu, true);
         SetVisibility(credits, true);

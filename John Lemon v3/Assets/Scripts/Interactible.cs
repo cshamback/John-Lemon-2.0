@@ -73,11 +73,11 @@ public class Interactible : MonoBehaviour
             
             if(gun.damage > 0) //saved damage seems to be the only thing that persists.
             {
-                Debug.Log("Tutorial complete. Enemies loaded.");
+                //Debug.Log("Tutorial complete. Enemies loaded.");
                 enemies.SetActive(true); //loads enemies in if the tutorial was complete.
             }
             else{
-                Debug.LogWarning("Tutorial not complete. Enemies not loaded.");
+                //Debug.LogWarning("Tutorial not complete. Enemies not loaded.");
                 enemies.SetActive(false); //disable enemies if tutorial has not yet been done.
             }
         }
