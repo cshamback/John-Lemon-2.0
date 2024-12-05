@@ -9970,7 +9970,7 @@ PrefabInstance:
       objectReference: {fileID: 1300939771}
     - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.92
+      value: 30.15
       objectReference: {fileID: 0}
     - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9978,7 +9978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.5
+      value: -17.81
       objectReference: {fileID: 0}
     - target: {fileID: 2229371733127632164, guid: e6a23a52e220ecf489c92febdd9eed50, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10684,7 +10684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &754164666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10715,7 +10715,7 @@ Transform:
   m_GameObject: {fileID: 754164665}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 33.76, y: 3.8, z: -19.57}
+  m_LocalPosition: {x: 32.81, y: 3.8, z: -19.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28742,6 +28742,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 829818303}
+    - target: {fileID: 5637635784312952864, guid: f1e7dd51ec0d4a7499d279edd02940cb, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689459261443833022, guid: f1e7dd51ec0d4a7499d279edd02940cb, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 6066989603241139367, guid: f1e7dd51ec0d4a7499d279edd02940cb, type: 3}
       propertyPath: m_AgentTypeID
       value: -1372625422
@@ -28800,7 +28808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7981513637672661567, guid: f1e7dd51ec0d4a7499d279edd02940cb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8226562159314064652, guid: f1e7dd51ec0d4a7499d279edd02940cb, type: 3}
       propertyPath: m_AgentTypeID

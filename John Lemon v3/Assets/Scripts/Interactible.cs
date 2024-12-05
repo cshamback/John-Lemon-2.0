@@ -63,6 +63,24 @@ public class Interactible : MonoBehaviour
         {
             Debug.Log("Could not find John in gameobject " + gameObject.name);
         }
+
+        if(tutorial != null)
+        {
+            tutorial.SetActive(false);
+        }
+        if(enemies != null)
+        {
+            
+            if(gun.damage > 0) //saved damage seems to be the only thing that persists.
+            {
+                Debug.Log("Tutorial complete. Enemies loaded.");
+                enemies.SetActive(true); //loads enemies in if the tutorial was complete.
+            }
+            else{
+                Debug.LogWarning("Tutorial not complete. Enemies not loaded.");
+                enemies.SetActive(false); //disable enemies if tutorial has not yet been done.
+            }
+        }
     }
 
     // Update is called once per frame
@@ -138,7 +156,7 @@ public class Interactible : MonoBehaviour
                         gun.SetProperties(damageAmount, range, gunMesh);
 
                         tutorial.SetActive(true); // enable tutorial once weapon is picked up
-                        enemies.SetActive(true); // set enemies to active once weapon is picked up
+                        //enemies.SetActive(true); // set enemies to active once weapon is picked up
 
                         // weapon cannot be picked up again
                         Destroy(gameObject);

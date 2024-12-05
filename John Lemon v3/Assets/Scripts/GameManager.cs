@@ -83,6 +83,7 @@ public class GameManager : MonoBehaviour
         // for the first two scene initializations, keep john where he is
         // for the last one, put him where he was right before transition to tutorial scene.
         // also restore his ammo from that point 
+        Debug.LogWarning("Tutorial complete: " + tutorialComplete);
         if (tutorialComplete && scene.name != "TargetPractice2")
         {
             GameObject switcher = GameObject.Find("TutorialCollider");
