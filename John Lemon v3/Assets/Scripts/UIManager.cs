@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -149,6 +148,7 @@ public class UIManager : MonoBehaviour
     {
         gameOver.SetActive(true); //turns on the game object menu.
         deathContent.SetActive(false); //make sure the other stuff is hidden.
+        gameOver.GetComponentInChildren<Canvas>().sortingOrder = 2; //so the buttons can be pushed
         StartCoroutine(FadeInAndOut());
     }
 
