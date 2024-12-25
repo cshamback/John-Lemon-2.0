@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEditor.SearchService;
 using Unity.VisualScripting;
 using System.Data;
 using UnityEngine.SceneManagement;
@@ -59,6 +58,7 @@ public class ToolTipManager : MonoBehaviour
         // if this is the case, we need to display the current tooltip 
         if (tooltipDisplay != null && tooltipGroup != null)
         {
+            //Debug.Log("CURRENT TIP: " + currentTip);
             if (conditions[currentTip] == true && tooltipGroup.alpha == 0)
             {
                 //Debug.Log("Displaying current tooltip: " + toolTips[currentTip]);
@@ -71,7 +71,8 @@ public class ToolTipManager : MonoBehaviour
             {
                 //Debug.Log("Hiding tooltip: " + conditions[currentTip]);
                 tooltipGroup.alpha = 0;
-                currentTip++;
+                currentTip = currentTip++ % toolTips.Length; //Doing this so there isn't an error
+                //When the level is restarted, the tooltip will start from the beginning.
             }
         }
         else
